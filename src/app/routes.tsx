@@ -18,7 +18,7 @@ import dentalPink from "../assets/dental-pink.jpg";
 import oralHealthEducation from "../assets/oral-health-education.jpeg";
 import happyChild from "../assets/happy-child.jpeg";
 
-type IconName = "arrow" | "heart" | "book" | "spark" | "people" | "search" | "pin" | "phone" | "mail" | "menu" | "close" | "check" | "instagram" | "facebook" | "download";
+type IconName = "arrow" | "heart" | "book" | "spark" | "people" | "search" | "pin" | "phone" | "mail" | "menu" | "close" | "check" | "instagram" | "facebook";
 
 function Icon({ name, className = "size-5" }: { name: IconName; className?: string }) {
   const paths: Record<IconName, ReactNode> = {
@@ -36,7 +36,6 @@ function Icon({ name, className = "size-5" }: { name: IconName; className?: stri
     check: <path d="m5 12 4 4L19 6" />,
     instagram: <><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17.5 6.5h.01" /></>,
     facebook: <path d="M14 8h3V4h-3a5 5 0 0 0-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9a1 1 0 0 1 1-1Z" />,
-    download: <><path d="M12 3v12m-5-5 5 5 5-5" /><path d="M5 21h14" /></>,
   };
   return <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
@@ -96,23 +95,7 @@ function Layout() {
       </header>
       <main><Outlet /></main>
       <Footer />
-      <BrandDownloads />
     </div>
-  );
-}
-
-function BrandDownloads() {
-  return (
-    <aside className="fixed bottom-5 right-5 z-40 hidden w-52 overflow-hidden rounded-2xl border border-[#00733f]/15 bg-white/95 shadow-2xl shadow-[#064b7b]/15 backdrop-blur-xl md:block" aria-label="Download ZAPD brand assets">
-      <div className="border-b border-[#064b7b]/10 bg-[#f1f8f3] px-4 py-3">
-        <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#00733f]">Brand downloads</p>
-      </div>
-      <div className="grid p-2 text-sm font-semibold text-[#315d79]">
-        <a href="/brand-assets/zapd-favicon-512.png" download className="flex items-center justify-between rounded-xl px-3 py-2.5 transition hover:bg-[#eaf1f5]">Favicon PNG <Icon name="download" className="size-4 text-[#00733f]" /></a>
-        <a href="/brand-assets/zapd-favicon.svg" download className="flex items-center justify-between rounded-xl px-3 py-2.5 transition hover:bg-[#eaf1f5]">Favicon SVG <Icon name="download" className="size-4 text-[#00733f]" /></a>
-        <a href="/brand-assets/zapd-social-share.png" download className="flex items-center justify-between rounded-xl px-3 py-2.5 transition hover:bg-[#eaf1f5]">Social image <Icon name="download" className="size-4 text-[#00733f]" /></a>
-      </div>
-    </aside>
   );
 }
 
