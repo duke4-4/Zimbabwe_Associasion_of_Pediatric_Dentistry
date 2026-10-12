@@ -1,22 +1,23 @@
 import { FormEvent, ReactNode, useEffect, useState } from "react";
 import { createBrowserRouter, Link, NavLink, Outlet, useLocation } from "react-router";
-import logo from "../assets/zapd-logo.png";
-import squareLogo from "../assets/zapd-logo-square.png";
-import drSheetal from "../assets/dr-sheetal-bhaskar.jpg";
-import drViki from "../assets/dr-viki.jpg";
-import drChipo from "../assets/dr-chipo-farirayi.jpg";
-import drMadziwa from "../assets/dr-madziwa.jpg";
-import drNyoni from "../assets/dr-nyoni.jpg";
-import childBrushing from "../assets/child-brushing.jpeg";
-import childDentistParent from "../assets/child-dentist-parent.jpg";
-import dentalToolsPink from "../assets/dental-tools-pink.jpg";
-import dentalToolsTeddy from "../assets/dental-tools-teddy.jpg";
-import childTreatment from "../assets/child-treatment.jpg";
-import dentalBlue from "../assets/dental-blue.jpg";
-import childDentistSmile from "../assets/child-dentist-smile.jpg";
-import dentalPink from "../assets/dental-pink.jpg";
-import oralHealthEducation from "../assets/oral-health-education.jpeg";
-import happyChild from "../assets/happy-child.jpeg";
+
+const logo = "/zapd5/Asset 4.png";
+const squareLogo = "/zapd5/Asset 5.png";
+const drSheetal = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Sheetal Bhaskar 1.jpg";
+const drViki = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Viki 1.jpg";
+const drChipo = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Chipo Farirayi.jpg";
+const drMadziwa = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Madziwa.jpg";
+const drNyoni = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Nyoni Headshot 1.jpg";
+const childBrushing = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/hero.jpeg";
+const childDentistParent = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Why Choosing the Right Kids Dentist Matters for Your Child’s Oral Health.jpg";
+const dentalToolsPink = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.27 (2).jpeg";
+const dentalToolsTeddy = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.28.jpeg";
+const childTreatment = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Kids Dentist_ Why Early Dental Care Matters for Your Child’s Healthy Smile.jpg";
+const dentalBlue = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Dental Facts.jpg";
+const childDentistSmile = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.29 (2).jpeg";
+const dentalPink = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Baixar ai gerado dental clínica propaganda fundo com cópia de espaço gratuitamente.jpg";
+const oralHealthEducation = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.29 (1).jpeg";
+const happyChild = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Pediatric Dental Gift Ideas That Make Kids Smile.jpg";
 
 type IconName = "arrow" | "heart" | "book" | "spark" | "people" | "search" | "pin" | "phone" | "mail" | "menu" | "close" | "check" | "instagram" | "facebook";
 
@@ -204,13 +205,13 @@ function Home() {
         <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow">About ZAPD</p>
-            <h2 className="section-title mt-4">A professional community with children at its heart.</h2>
+            <h2 className="mt-4 font-display text-3xl leading-tight text-[#064b7b] sm:text-4xl">A professional community with children at its heart.</h2>
             <Link to="/about" className="mt-7 inline-flex items-center gap-3 font-bold text-[#e31e24]">Who we are <Icon name="arrow" /></Link>
           </div>
           <div className="relative">
-            <img src={dentalBlue} alt="Dental care objects on a soft blue background" className="h-72 w-full rounded-3xl object-cover" />
-            <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/95 p-5 shadow-lg">
-              <p className="font-display text-2xl leading-snug text-[#315d79]">We connect dental professionals, share knowledge and help improve oral-health outcomes for children across Zimbabwe.</p>
+            <img src={dentalPink} alt="A promotional dental care image with a modern clinical theme" className="h-72 w-full rounded-[2rem] object-cover" />
+            <div className="absolute inset-x-3 bottom-3 rounded-2xl bg-white/95 p-4 text-center shadow-lg sm:inset-x-5 sm:bottom-5 sm:p-5">
+              <p className="mx-auto max-w-xl font-display text-base leading-snug text-[#315d79] sm:text-xl">We connect dental professionals, share knowledge and help improve oral-health outcomes for children across Zimbabwe.</p>
             </div>
           </div>
         </div>
@@ -256,7 +257,7 @@ function Home() {
             <div className="mt-8 flex flex-wrap gap-3">{["Professional network", "Education & CPD", "Shared resources"].map((benefit) => <span key={benefit} className="rounded-full border border-[#064b7b]/15 bg-white px-4 py-2 text-sm font-semibold">{benefit}</span>)}</div>
             <Link to="/membership" className="primary-button mt-9">Explore membership <Icon name="arrow" /></Link>
           </div>
-          <img src={oralHealthEducation} alt="An oral-health educator demonstrating toothbrushing" className="h-full min-h-[480px] w-full object-cover object-center" />
+          <img src={oralHealthEducation} alt="An oral-health educator demonstrating toothbrushing" className="w-full object-cover object-center" />
         </div>
       </section>
 
