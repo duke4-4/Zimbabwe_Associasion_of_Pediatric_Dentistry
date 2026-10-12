@@ -9,7 +9,7 @@
     },
     "/about": {
       "title": "About ZAPD | Children's Oral Health in Zimbabwe",
-      "description": "Learn about ZAPD's mission, executive committee and commitment to prevention, professional education and better oral health for children in Zimbabwe."
+      "description": "Learn about ZAPD's vision, mission, objectives and values: children's oral health, prevention, education, professional development and collaboration."
     },
     "/parents": {
       "title": "Children's Dental Care for Parents & Caregivers | ZAPD",
@@ -29,7 +29,11 @@
     },
     "/events": {
       "title": "Dental Education & Professional Events | ZAPD",
-      "description": "Connect with ZAPD about dental conferences, workshops, webinars and professional learning. Our dedicated events calendar is coming soon."
+      "description": "Explore upcoming ZAPD conferences, courses, workshops, webinars and CPD activities in Zimbabwe, and browse the archive of past association events."
+    },
+    "/blog": {
+      "title": "The ZAPD Journal | Blog & News — Coming Soon",
+      "description": "Coming soon: the ZAPD Journal, with children's oral-health guidance for parents, professional perspectives and association news from Zimbabwe."
     },
     "/contact": {
       "title": "Contact ZAPD | Paediatric Dentistry Association, Zimbabwe",

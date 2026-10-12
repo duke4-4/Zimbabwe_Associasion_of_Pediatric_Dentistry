@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" fill="none">
+<defs><pattern id="paper" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="3" cy="4" r="1" fill="#eedfbf" opacity=".15"/><path d="m18 21 5-2" stroke="#eedfbf" opacity=".1"/></pattern></defs>
+<path fill="#3e706f" d="M0 0h1600v600H0z"/>
+<path d="M790 0h810v600H640C830 460 640 270 790 0Z" fill="#558a7d"/>
+<path d="M1340-80c-90 180 20 300 260 330V0Z" fill="#bb8069"/>
+<path d="M600 600c230-160 460 20 1000-120v120Z" fill="#b29a5d"/>
+<ellipse cx="1080" cy="330" rx="360" ry="220" stroke="#d6c99c" stroke-opacity=".3" stroke-width="2" transform="rotate(-15 1080 330)"/>
+<path d="M90 425q240-270 510-75M1400 60l35 18m-45 25 30 8M740 120l20-30" stroke="#b8c6ac" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+<g transform="translate(905 80) rotate(9 160 200)"><rect width="330" height="425" rx="22" fill="#f3e4c4"/><rect x="96" y="-12" width="140" height="50" rx="15" fill="#77ad98"/><g fill="none" stroke="#3e8179" stroke-width="7"><path d="m45 115 12 12 22-28m-34 116 12 12 22-28m-34 116 12 12 22-28"/><path d="M110 113h160M110 213h160M110 313h125" stroke="#617b7a"/></g></g><path d="m1250 375 70-205 25 9-70 205-23 25Z" fill="#e3bb56"/>
+<path fill="url(#paper)" d="M0 0h1600v600H0z"/>
+</svg>
