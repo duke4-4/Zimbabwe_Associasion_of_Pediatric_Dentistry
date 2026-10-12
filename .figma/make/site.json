@@ -3,10 +3,10 @@
     "index": false
   },
   "icons": {
-    "icon": "/.figma/make/favicon.png"
+    "icon": "/brand-assets/zapd-favicon-512.png"
   },
   "openGraph": {
-    "image": "/.figma/make/social-image.png"
+    "image": "/brand-assets/zapd-social-share.png"
   },
   "accessibility": {
     "addBypassLinks": false,

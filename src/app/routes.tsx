@@ -1,23 +1,23 @@
 import { FormEvent, ReactNode, useEffect, useState } from "react";
 import { createBrowserRouter, Link, NavLink, Outlet, useLocation } from "react-router";
 
-const logo = "/zapd5/Asset 4.png";
-const squareLogo = "/zapd5/Asset 5.png";
-const drSheetal = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Sheetal Bhaskar 1.jpg";
-const drViki = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Viki 1.jpg";
-const drChipo = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Chipo Farirayi.jpg";
-const drMadziwa = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Madziwa.jpg";
-const drNyoni = "/ZAPD - Doctor Headshots-20261012T083736Z-1-001/ZAPD - Doctor Headshots/Dr Nyoni Headshot 1.jpg";
-const childBrushing = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/hero.jpeg";
-const childDentistParent = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Why Choosing the Right Kids Dentist Matters for Your Child’s Oral Health.jpg";
-const dentalToolsPink = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.27 (2).jpeg";
-const dentalToolsTeddy = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.28.jpeg";
-const childTreatment = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Kids Dentist_ Why Early Dental Care Matters for Your Child’s Healthy Smile.jpg";
-const dentalBlue = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Dental Facts.jpg";
-const childDentistSmile = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.29 (2).jpeg";
-const dentalPink = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Baixar ai gerado dental clínica propaganda fundo com cópia de espaço gratuitamente.jpg";
-const oralHealthEducation = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/WhatsApp Image 2026-10-09 at 12.11.29 (1).jpeg";
-const happyChild = "/ZAPD - Stock Images-20261012T083717Z-1-001/ZAPD - Stock Images/Pediatric Dental Gift Ideas That Make Kids Smile.jpg";
+import logo from "../assets/logo.png";
+import squareLogo from "../assets/squareLogo.png";
+import drSheetal from "../assets/drSheetal.jpg";
+import drViki from "../assets/drViki.jpg";
+import drChipo from "../assets/drChipo.jpg";
+import drMadziwa from "../assets/drMadziwa.jpg";
+import drNyoni from "../assets/drNyoni.jpg";
+import childBrushing from "../assets/childBrushing.jpeg";
+import childDentistParent from "../assets/childDentistParent.jpg";
+import dentalToolsPink from "../assets/dentalToolsPink.jpeg";
+import dentalToolsTeddy from "../assets/dentalToolsTeddy.jpeg";
+import childTreatment from "../assets/childTreatment.jpg";
+import dentalBlue from "../assets/dentalBlue.jpg";
+import childDentistSmile from "../assets/childDentistSmile.jpeg";
+import dentalPink from "../assets/dentalPink.jpg";
+import oralHealthEducation from "../assets/oralHealthEducation.jpeg";
+import happyChild from "../assets/happyChild.jpg";
 
 type IconName = "arrow" | "heart" | "book" | "spark" | "people" | "search" | "pin" | "phone" | "mail" | "menu" | "close" | "check" | "instagram" | "facebook";
 
