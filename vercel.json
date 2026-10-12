@@ -4,6 +4,13 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/((?!assets/|brand-assets/|favicon\\.svg).*)", "destination": "/index.html" }
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/parents", "destination": "/parents/index.html" },
+    { "source": "/membership", "destination": "/membership/index.html" },
+    { "source": "/join", "destination": "/join/index.html" },
+    { "source": "/directory", "destination": "/directory/index.html" },
+    { "source": "/events", "destination": "/events/index.html" },
+    { "source": "/contact", "destination": "/contact/index.html" },
+    { "source": "/((?!api/|assets/|brand-assets/|favicon\\.svg|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
   ]
 }

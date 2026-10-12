@@ -1,0 +1,39 @@
+{
+  "siteUrl": "https://zapdnew.vercel.app",
+  "siteName": "Zimbabwe Association of Paediatric Dentistry",
+  "image": "/brand-assets/zapd-social-share.png",
+  "pages": {
+    "/": {
+      "title": "Zimbabwe Association of Paediatric Dentistry",
+      "description": "ZAPD connects dental professionals and families in Zimbabwe to support children's oral health through prevention, education and professional collaboration."
+    },
+    "/about": {
+      "title": "About ZAPD | Children's Oral Health in Zimbabwe",
+      "description": "Learn about ZAPD's mission, executive committee and commitment to prevention, professional education and better oral health for children in Zimbabwe."
+    },
+    "/parents": {
+      "title": "Children's Dental Care for Parents & Caregivers | ZAPD",
+      "description": "Explore children's oral-health topics, from first dental visits and daily brushing to baby teeth, prevention and positive dental experiences with ZAPD."
+    },
+    "/membership": {
+      "title": "Dental Professional Membership in Zimbabwe | ZAPD",
+      "description": "Explore ZAPD membership categories and opportunities for dental professionals and students to connect, share knowledge and support children's oral health."
+    },
+    "/join": {
+      "title": "Apply for ZAPD Membership | Zimbabwe Dental Community",
+      "description": "Apply to join the Zimbabwe Association of Paediatric Dentistry. Share your professional details and interest in improving children's oral health."
+    },
+    "/directory": {
+      "title": "Meet ZAPD Member Dentists | Zimbabwe Dental Directory",
+      "description": "Meet ZAPD's member dental professionals and contact the association for help connecting with its children's oral-health community in Zimbabwe."
+    },
+    "/events": {
+      "title": "Dental Education & Professional Events | ZAPD",
+      "description": "Connect with ZAPD about dental conferences, workshops, webinars and professional learning. Our dedicated events calendar is coming soon."
+    },
+    "/contact": {
+      "title": "Contact ZAPD | Paediatric Dentistry Association, Zimbabwe",
+      "description": "Contact the Zimbabwe Association of Paediatric Dentistry in Harare for membership enquiries, parent questions and professional collaboration."
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { FormEvent, ReactNode, useEffect, useState } from "react";
 import { createBrowserRouter, Link, NavLink, Outlet, useLocation } from "react-router";
+import PageMetadata from "./PageMetadata";
 
 import logo from "../assets/logo.png";
 import squareLogo from "../assets/squareLogo.png";
@@ -10,14 +11,13 @@ import drMadziwa from "../assets/drMadziwa.jpg";
 import drNyoni from "../assets/drNyoni.jpg";
 import childBrushing from "../assets/childBrushing.jpeg";
 import childDentistParent from "../assets/childDentistParent.jpg";
-import dentalToolsPink from "../assets/dentalToolsPink.jpeg";
-import dentalToolsTeddy from "../assets/dentalToolsTeddy.jpeg";
-import childTreatment from "../assets/childTreatment.jpg";
-import dentalBlue from "../assets/dentalBlue.jpg";
-import childDentistSmile from "../assets/childDentistSmile.jpeg";
-import dentalPink from "../assets/dentalPink.jpg";
-import oralHealthEducation from "../assets/oralHealthEducation.jpeg";
-import happyChild from "../assets/happyChild.jpg";
+import dentalToolsTeddy from "../assets/dental-tools-teddy.jpg";
+import dentalToolsPink from "../assets/dental-tools-pink.jpg";
+import happyChild from "../assets/happy-child.jpeg";
+import oralHealthEducation from "../assets/oral-health-education.jpeg";
+import dentalBlue from "../assets/dental-blue.jpg";
+import childrenTogether from "../assets/stock/children-together.jpg";
+import smilingBoy from "../assets/stock/smiling-boy.jpg";
 
 type IconName = "arrow" | "heart" | "book" | "spark" | "people" | "search" | "pin" | "phone" | "mail" | "menu" | "close" | "check" | "instagram" | "facebook";
 
@@ -52,7 +52,7 @@ const nav = [
 function BrandLogo({ light = false }: { light?: boolean }) {
   return (
     <Link to="/" aria-label="ZAPD home">
-      <img src={logo} alt="Zimbabwe Association of Paediatric Dentistry" className={`h-14 w-auto object-contain sm:h-16 ${light ? "brightness-0 invert" : ""}`} />
+      <img decoding="async" loading="eager" fetchPriority="high" src={logo} alt="Zimbabwe Association of Paediatric Dentistry" className={`h-14 w-auto object-contain sm:h-16 ${light ? "brightness-0 invert" : ""}`} />
     </Link>
   );
 }
@@ -74,22 +74,23 @@ function Layout() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#fbfaf6] text-[#123f60]">
       <ScrollToTop />
+      <PageMetadata />
       <header className="sticky top-0 z-50 border-b border-[#00733f]/15 bg-[#fbfaf6]/95 shadow-[0_1px_0_rgba(0,115,63,0.05)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
           <BrandLogo />
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
+          <nav className="hidden items-center gap-2 lg:flex" aria-label="Main navigation">
             {nav.map(([label, path]) => (
-              <NavLink key={path} to={path} className={({ isActive }) => `text-sm font-semibold transition hover:text-[#e31e24] ${isActive ? "text-[#e31e24]" : "text-[#315d79]"}`}>{label}</NavLink>
+              <NavLink key={path} to={path} className={({ isActive }) => `brand-nav-link ${isActive ? "brand-nav-active" : ""}`}>{label}</NavLink>
             ))}
           </nav>
-          <Link to="/join" className="hidden rounded-full bg-[#064b7b] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#033757] lg:inline-flex">Join ZAPD</Link>
-          <button onClick={() => setMenuOpen(!menuOpen)} className="grid size-11 place-items-center rounded-full bg-[#eaf1f5] lg:hidden" aria-label="Toggle menu"><Icon name={menuOpen ? "close" : "menu"} /></button>
+          <NavLink to="/join" className={({ isActive }) => `hidden rounded-full px-5 py-3 text-sm font-bold transition lg:inline-flex ${isActive ? "bg-[#ffed00] text-[#064b7b] ring-2 ring-[#00733f]" : "bg-[#064b7b] text-white hover:bg-[#00733f]"}`}>Join ZAPD</NavLink>
+          <button onClick={() => setMenuOpen(!menuOpen)} className="grid size-11 shrink-0 place-items-center rounded-full bg-[#eaf1f5] lg:hidden" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="mobile-navigation"><Icon name={menuOpen ? "close" : "menu"} /></button>
         </div>
         {menuOpen && (
-          <nav className="border-t border-[#064b7b]/10 bg-[#fbfaf6] px-5 py-5 lg:hidden">
+          <nav id="mobile-navigation" aria-label="Mobile navigation" className="max-h-[calc(100dvh-90px)] overflow-y-auto border-t border-[#064b7b]/10 bg-[#fbfaf6] px-5 py-5 lg:hidden">
             <div className="flex flex-col gap-1">
-              {nav.map(([label, path]) => <NavLink key={path} to={path} onClick={() => setMenuOpen(false)} className="rounded-xl px-4 py-3 font-semibold hover:bg-[#eaf1f5]">{label}</NavLink>)}
-              <Link to="/join" onClick={() => setMenuOpen(false)} className="mt-2 rounded-full bg-[#064b7b] px-5 py-3 text-center font-bold text-white">Join ZAPD</Link>
+              {nav.map(([label, path]) => <NavLink key={path} to={path} onClick={() => setMenuOpen(false)} className={({ isActive }) => `brand-nav-link brand-nav-mobile ${isActive ? "brand-nav-active" : ""}`}>{label}</NavLink>)}
+              <NavLink to="/join" onClick={() => setMenuOpen(false)} className={({ isActive }) => `mt-2 rounded-full px-5 py-3 text-center font-bold ${isActive ? "bg-[#ffed00] text-[#064b7b] ring-2 ring-[#00733f]" : "bg-[#064b7b] text-white"}`}>Join ZAPD</NavLink>
             </div>
           </nav>
         )}
@@ -158,7 +159,7 @@ function PageHero({ eyebrow, title, text }: { eyebrow: string; title: string; te
       <div className="absolute -right-24 -top-32 size-80 rounded-full border-[65px] border-[#ffed00]/70" />
       <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
         <p className="eyebrow">{eyebrow}</p>
-        <h1 className="mt-4 max-w-4xl font-display text-5xl leading-tight tracking-tight text-[#064b7b] sm:text-6xl">{title}</h1>
+        <h1 className="mt-4 max-w-4xl font-display text-4xl leading-tight tracking-tight text-[#064b7b] sm:text-6xl">{title}</h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-[#4d6e82]">{text}</p>
       </div>
     </section>
@@ -180,22 +181,22 @@ function Home() {
       <section className="relative isolate overflow-hidden bg-[#eaf1f5]">
         <div className="absolute -left-32 -top-32 size-96 rounded-full border-[70px] border-white/60" />
         <div className="absolute -bottom-32 left-1/3 size-80 rounded-full bg-[#00733f]/10 blur-3xl" />
-        <div className="mx-auto grid min-h-[720px] max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:py-20">
+        <div className="mx-auto grid lg:min-h-[720px] max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:py-20">
           <div className="relative z-10 max-w-2xl">
-            <h1 className="font-display text-5xl leading-[1.03] tracking-[-0.04em] text-[#064b7b] sm:text-6xl lg:text-7xl">Healthy smiles.<br /><em className="font-normal text-[#e31e24]">Brighter futures.</em></h1>
+            <h1 className="font-display text-4xl leading-[1.03] tracking-[-0.04em] text-[#064b7b] sm:text-6xl lg:text-7xl">Healthy smiles.<br /><em className="font-normal text-[#e31e24]">Brighter futures.</em></h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-[#4d6e82]">We’re bringing dental professionals and families together to improve children’s oral health—one confident, cared-for smile at a time.</p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/about" className="primary-button">Discover our work <Icon name="arrow" /></Link>
               <Link to="/directory" className="secondary-button">View member directory</Link>
             </div>
             <div className="mt-12 flex items-center gap-4 border-t border-[#064b7b]/10 pt-7">
-              <img src={squareLogo} alt="" className="size-12 rounded-xl object-contain" />
+              <img decoding="async" loading="lazy" src={squareLogo} alt="" className="size-12 rounded-xl object-contain" />
               <p className="text-sm font-medium text-[#4d6e82]"><strong className="text-[#064b7b]">A growing community</strong><br />of caring dental professionals</p>
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-xl lg:mr-0">
             <div className="absolute -right-16 -top-10 size-52 rounded-full bg-[#ffed00]" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[45%_45%_32px_32px] shadow-2xl shadow-[#064b7b]/15"><img src={childBrushing} alt="A smiling child brushing her teeth" className="size-full object-cover object-top" /></div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[45%_45%_32px_32px] shadow-2xl shadow-[#064b7b]/15"><img decoding="async" loading="eager" fetchPriority="high" src={childBrushing} alt="A smiling child brushing her teeth" className="size-full object-cover object-top" /></div>
             <div className="absolute -bottom-7 -left-6 max-w-56 rounded-3xl bg-white p-5 shadow-xl shadow-[#064b7b]/10 sm:-left-12"><span className="mb-3 grid size-10 place-items-center rounded-full bg-[#fee9e7] text-[#e31e24]"><Icon name="heart" /></span><p className="font-display text-xl leading-tight text-[#064b7b]">Care that starts early and lasts a lifetime.</p></div>
           </div>
         </div>
@@ -209,7 +210,7 @@ function Home() {
             <Link to="/about" className="mt-7 inline-flex items-center gap-3 font-bold text-[#e31e24]">Who we are <Icon name="arrow" /></Link>
           </div>
           <div className="relative">
-            <img src={dentalPink} alt="A promotional dental care image with a modern clinical theme" className="h-72 w-full rounded-[2rem] object-cover" />
+            <img decoding="async" loading="lazy" src={childrenTogether} alt="Two smiling children standing back to back in colourful clothes" className="h-80 w-full rounded-[2rem] object-cover object-[center_30%] sm:h-96" />
             <div className="absolute inset-x-3 bottom-3 rounded-2xl bg-white/95 p-4 text-center shadow-lg sm:inset-x-5 sm:bottom-5 sm:p-5">
               <p className="mx-auto max-w-xl font-display text-base leading-snug text-[#315d79] sm:text-xl">We connect dental professionals, share knowledge and help improve oral-health outcomes for children across Zimbabwe.</p>
             </div>
@@ -220,13 +221,13 @@ function Home() {
 
       <section className="bg-[#064b7b] text-white">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 lg:grid-cols-2 lg:px-8">
-          <div className="relative min-h-[500px] overflow-hidden rounded-3xl">
-            <img src={childDentistParent} alt="A child and parent having a positive dental visit" className="absolute inset-0 size-full object-cover" />
-            <div className="absolute bottom-6 left-6 rounded-2xl bg-[#ffed00] p-5 text-[#064b7b]"><p className="text-xs font-bold uppercase tracking-widest">Good to know</p><strong className="mt-1 block font-display text-2xl">The first visit is recommended by age one.</strong></div>
+          <div className="relative min-h-[360px] sm:min-h-[500px] overflow-hidden rounded-3xl">
+            <img decoding="async" loading="lazy" src={childDentistParent} alt="A child and parent having a positive dental visit" className="absolute inset-0 size-full object-cover" />
+            <div className="absolute bottom-4 left-4 right-4 rounded-2xl sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-[calc(100%-3rem)] bg-[#ffed00] p-5 text-[#064b7b]"><p className="text-xs font-bold uppercase tracking-widest">Good to know</p><strong className="mt-1 block font-display text-2xl">The first visit is recommended by age one.</strong></div>
           </div>
           <div>
             <p className="eyebrow !text-[#ffed00]">Parents & caregivers</p>
-            <h2 className="mt-4 font-display text-5xl leading-tight">Confident care begins with clear guidance.</h2>
+            <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">Confident care begins with clear guidance.</h2>
             <p className="mt-6 text-lg leading-8 text-white/70">Explore practical, accessible information about first visits, brushing, fluoride, diet, dental anxiety and emergencies.</p>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {["First dental visits", "Baby teeth matter", "Brushing & fluoride", "Preventing decay"].map((topic) => <div key={topic} className="rounded-xl border border-white/15 px-4 py-3 text-sm font-semibold">{topic}</div>)}
@@ -245,7 +246,7 @@ function Home() {
             {["Healthy development", "Early prevention", "Positive experiences"].map((item, index) => <div key={item} className="rounded-2xl bg-[#eaf1f5] p-5"><span className="font-display text-2xl text-[#e31e24]">0{index + 1}</span><p className="mt-3 font-bold text-[#064b7b]">{item}</p></div>)}
           </div>
         </div>
-        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-full border-[14px] border-[#ffed00]"><img src={happyChild} alt="A happy young child with colourful painted hands" className="size-full object-cover" /></div>
+        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-full border-[14px] border-[#ffed00]"><img decoding="async" loading="lazy" src={happyChild} alt="A smiling child with colourful painted hands" className="size-full object-cover" /></div>
       </section>
 
       <section className="bg-[#f1f5f7]">
@@ -257,7 +258,7 @@ function Home() {
             <div className="mt-8 flex flex-wrap gap-3">{["Professional network", "Education & CPD", "Shared resources"].map((benefit) => <span key={benefit} className="rounded-full border border-[#064b7b]/15 bg-white px-4 py-2 text-sm font-semibold">{benefit}</span>)}</div>
             <Link to="/membership" className="primary-button mt-9">Explore membership <Icon name="arrow" /></Link>
           </div>
-          <img src={oralHealthEducation} alt="An oral-health educator demonstrating toothbrushing" className="w-full object-cover object-center" />
+          <img decoding="async" loading="lazy" src={oralHealthEducation} alt="An educator demonstrating brushing with a colourful tooth model" className="w-full object-cover object-center" />
         </div>
       </section>
 
@@ -267,7 +268,7 @@ function Home() {
           <Link to="/directory" className="inline-flex items-center gap-3 font-bold text-[#e31e24]">View full directory <Icon name="arrow" /></Link>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {members.slice(0, 3).map((member) => <Link key={member.name} to="/directory" className="group overflow-hidden rounded-3xl border border-[#064b7b]/10 bg-white"><div className="aspect-[4/3] overflow-hidden bg-[#eaf1f5]"><img src={member.image} alt={member.name} className="size-full object-cover object-top transition duration-500 group-hover:scale-105" /></div><div className="p-5"><p className="text-xs font-bold uppercase tracking-widest text-[#e31e24]">ZAPD Member</p><h3 className="mt-2 font-display text-2xl text-[#064b7b]">{member.name}</h3></div></Link>)}
+          {members.slice(0, 3).map((member) => <Link key={member.name} to="/directory" className="group overflow-hidden rounded-3xl border border-[#064b7b]/10 bg-white"><div className="aspect-[4/3] overflow-hidden bg-[#eaf1f5]"><img decoding="async" loading="lazy" src={member.image} alt={member.name} className="size-full object-cover object-top transition duration-500 group-hover:scale-105" /></div><div className="p-5"><p className="text-xs font-bold uppercase tracking-widest text-[#e31e24]">ZAPD Member</p><h3 className="mt-2 font-display text-2xl text-[#064b7b]">{member.name}</h3></div></Link>)}
         </div>
       </section>
 
@@ -301,7 +302,7 @@ function Home() {
 
       <section className="mx-auto max-w-7xl px-5 pb-24 lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem] bg-white p-8 shadow-[0_24px_80px_rgba(0,115,63,0.12)] ring-1 ring-[#00733f]/10 before:absolute before:inset-0 before:bg-[#00733f]/10 sm:p-12">
-          <img src={dentalToolsPink} alt="" className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover opacity-25 mix-blend-multiply md:block" />
+          <img decoding="async" loading="lazy" src={childDentistParent} alt="" className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover opacity-25 mix-blend-multiply md:block" />
           <div className="relative max-w-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#e31e24]">Contact ZAPD</p>
             <h2 className="mt-4 font-display text-4xl text-[#064b7b] sm:text-5xl">Questions, ideas or ready to connect?</h2>
@@ -349,7 +350,7 @@ function About() {
         </div>
         <div className="grid gap-8 md:grid-cols-2">
           <article className="relative mt-16 min-h-[440px] overflow-hidden rounded-3xl bg-[#064b7b] p-9 text-white">
-            <img src={happyChild} alt="" className="absolute inset-0 size-full object-cover object-center opacity-60" />
+            <img decoding="async" loading="lazy" src={smilingBoy} alt="" className="absolute inset-0 size-full object-cover object-[center_25%] opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#064b7b] via-[#064b7b]/75 to-[#064b7b]/25" />
             <div className="relative flex h-full flex-col justify-end">
               <p className="eyebrow !text-[#ffed00]">Our vision</p>
@@ -357,7 +358,7 @@ function About() {
             </div>
           </article>
           <article className="mt-16 overflow-hidden rounded-3xl bg-[#eaf1f5]">
-            <img src={dentalPink} alt="Dental models and instruments in a professional setting" className="h-48 w-full object-cover" />
+            <img decoding="async" loading="lazy" src={oralHealthEducation} alt="Demonstrating toothbrushing with a dental teaching model" className="h-48 w-full object-cover" />
             <div className="p-9">
               <p className="eyebrow">Our mission</p>
               <h2 className="mt-5 font-display text-3xl text-[#064b7b]">To promote excellence in the prevention, education and provision of paediatric dental care through professional development, collaboration and public education.</h2>
@@ -366,7 +367,7 @@ function About() {
         </div>
       </section>
       <section className="relative overflow-hidden bg-[#064b7b] text-white">
-        <img src={childDentistParent} alt="" className="absolute inset-0 size-full object-cover object-center opacity-55" />
+        <img decoding="async" loading="lazy" src={childDentistParent} alt="" className="absolute inset-0 size-full object-cover object-center opacity-55" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#064b7b]/95 via-[#064b7b]/80 to-[#064b7b]/55" />
         <div className="absolute -right-32 -top-32 size-96 rounded-full border-[80px] border-white/5" />
         <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8">
@@ -394,10 +395,10 @@ function About() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
-        <div className="relative min-h-[520px] overflow-hidden rounded-[2rem]">
-          <img src={childDentistSmile} alt="A dentist creating a positive dental experience for a child and parent" className="absolute inset-0 size-full object-cover object-center" />
+        <div className="relative min-h-[380px] sm:min-h-[520px] overflow-hidden rounded-[2rem]">
+          <img decoding="async" loading="lazy" src={dentalBlue} alt="White tooth models and dental tools on a soft blue background" className="absolute inset-0 size-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#042f4d]/95 via-[#064b7b]/75 to-transparent" />
-          <div className="relative flex min-h-[520px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
+          <div className="relative flex min-h-[380px] sm:min-h-[520px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
             <p className="eyebrow !text-[#ffed00]">Become a member</p>
             <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">Grow with a community committed to children’s oral health.</h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/75">Connect with colleagues, develop your knowledge and take part in a professional network working towards healthier smiles across Zimbabwe.</p>
@@ -416,11 +417,11 @@ function About() {
             </div>
             <Link to="/directory" className="inline-flex items-center gap-2 font-bold text-[#e31e24]">View member directory <Icon name="arrow" /></Link>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-10 grid grid-cols-1 gap-4 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {members.map((member) => (
               <article key={member.name} className="group overflow-hidden rounded-2xl bg-white">
                 <div className="aspect-[4/5] overflow-hidden bg-[#dfeaf0]">
-                  <img src={member.image} alt={member.name} className={`size-full transition duration-500 group-hover:scale-105 ${member.imageClass ?? "object-cover object-top"}`} />
+                  <img decoding="async" loading="lazy" src={member.image} alt={member.name} className={`size-full transition duration-500 group-hover:scale-105 ${member.imageClass ?? "object-cover object-top"}`} />
                 </div>
                 <div className="p-4">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-[#e31e24]">Executive Committee</p>
@@ -438,7 +439,16 @@ function About() {
 const parentTopics = ["Your child’s first dental visit", "Why baby teeth matter", "Toothbrushing and fluoride", "Diet and children’s teeth", "Preventing tooth decay", "Dental anxiety and emergencies", "Dental injuries", "Special care needs"];
 
 function Parents() {
-  return <><PageHero eyebrow="Parents & caregivers" title="Your child’s smile starts early." text="Practical, trusted guidance to help you feel confident caring for your child’s oral health at every stage." /><section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 lg:grid-cols-2 lg:px-8"><div className="relative min-h-[560px] overflow-hidden rounded-3xl"><img src={childDentistSmile} alt="A child smiling during a positive dental visit with a parent" className="absolute inset-0 size-full object-cover" /><div className="absolute bottom-6 left-6 rounded-2xl bg-[#ffed00] p-5 text-[#064b7b]"><strong className="font-display text-2xl">First visit?</strong><p className="font-semibold">By their first birthday is ideal.</p></div></div><div className="flex flex-col justify-center"><h2 className="section-title">Simple answers for growing smiles.</h2><p className="mt-5 leading-8 text-[#5c7889]">Healthy baby teeth support eating, speaking, development and space for permanent teeth. Good habits today can shape a lifetime of confident care.</p><div className="mt-8 grid gap-3">{parentTopics.map((topic) => <article key={topic} className="flex items-center justify-between rounded-2xl border border-[#064b7b]/10 bg-white px-5 py-4 font-semibold"><span>{topic}</span><Icon name="arrow" className="size-4 text-[#e31e24]" /></article>)}</div></div></section></>;
+  return <><PageHero eyebrow="Parents & caregivers" title="Your child’s smile starts early." text="Practical, trusted guidance to help you feel confident caring for your child’s oral health at every stage." /><section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 lg:grid-cols-2 lg:px-8"><div className="relative min-h-[380px] sm:min-h-[560px] overflow-hidden rounded-3xl"><img decoding="async" loading="lazy" src={dentalBlue} alt="Playful tooth models on a soft blue background" className="absolute inset-0 size-full object-cover object-[70%_center]" /><div className="absolute bottom-4 left-4 right-4 rounded-2xl sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-[calc(100%-3rem)] bg-[#ffed00] p-5 text-[#064b7b]"><strong className="font-display text-2xl">First visit?</strong><p className="font-semibold">By their first birthday is ideal.</p></div></div><div className="flex flex-col justify-center"><h2 className="section-title">Simple answers for growing smiles.</h2><p className="mt-5 leading-8 text-[#5c7889]">Healthy baby teeth support eating, speaking, development and space for permanent teeth. Good habits today can shape a lifetime of confident care.</p><div className="mt-8 grid gap-3">{parentTopics.map((topic) => <article key={topic} className="flex items-center justify-between rounded-2xl border border-[#064b7b]/10 bg-white px-5 py-4 font-semibold"><span>{topic}</span><Icon name="arrow" className="size-4 text-[#e31e24]" /></article>)}</div></div></section><ParentGallery /></>;
+}
+
+function ParentGallery() {
+  const cards = [
+    { image: childBrushing, title: "Daily brushing", alt: "A child practising toothbrushing at home", text: "Small daily routines help children feel confident caring for their teeth." },
+    { image: dentalToolsTeddy, title: "Gentle dental visits", alt: "A teddy bear beside a toothbrush and dental care tools", text: "A caring dental team can help make checkups a positive part of growing up." },
+    { image: childDentistParent, title: "Parents are partners", alt: "A parent supporting a child at the dentist", text: "Share your questions and help your child feel supported throughout their visit." },
+  ];
+  return <section className="mx-auto max-w-7xl px-5 pb-20 lg:px-8"><div className="grid gap-6 md:grid-cols-3">{cards.map((card) => <article key={card.title} className="overflow-hidden rounded-3xl border border-[#064b7b]/10 bg-white"><img loading="lazy" decoding="async" src={card.image} alt={card.alt} className="aspect-[4/3] w-full object-cover object-center" /><div className="p-6"><h3 className="font-display text-2xl text-[#064b7b]">{card.title}</h3><p className="mt-3 leading-7 text-[#5c7889]">{card.text}</p></div></article>)}</div></section>;
 }
 
 function Membership() {
@@ -476,8 +486,8 @@ function Membership() {
           </div>
           <Link to="/join" className="primary-button mt-9">Start your application <Icon name="arrow" /></Link>
         </div>
-        <div className="relative min-h-[520px] overflow-hidden rounded-3xl">
-          <img src={childTreatment} alt="A child receiving attentive dental care" className="absolute inset-0 size-full object-cover object-center" />
+        <div className="relative min-h-[380px] sm:min-h-[520px] overflow-hidden rounded-3xl">
+          <img decoding="async" loading="lazy" src={dentalToolsPink} alt="Tooth models, a dental teaching model and care tools on a pastel pink background" className="absolute inset-0 size-full object-cover object-center" />
           <div className="absolute inset-x-5 bottom-5 rounded-2xl bg-white/95 p-6 shadow-xl backdrop-blur-sm">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e31e24]">Shared purpose</p>
             <p className="mt-2 font-display text-2xl text-[#064b7b]">Learning and collaborating for healthier smiles across Zimbabwe.</p>
@@ -530,10 +540,10 @@ function Membership() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-        <div className="relative min-h-[500px] overflow-hidden rounded-[2rem]">
-          <img src={oralHealthEducation} alt="A dental professional demonstrating good toothbrushing technique" className="absolute inset-0 size-full object-cover object-center" />
+        <div className="relative min-h-[360px] sm:min-h-[500px] overflow-hidden rounded-[2rem]">
+          <img decoding="async" loading="lazy" src={oralHealthEducation} alt="A toothbrushing demonstration using a colourful teaching model" className="absolute inset-0 size-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#042f4d]/95 via-[#064b7b]/75 to-transparent" />
-          <div className="relative flex min-h-[500px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
+          <div className="relative flex min-h-[360px] sm:min-h-[500px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
             <p className="eyebrow !text-[#ffed00]">Ready to join?</p>
             <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">Bring your experience, curiosity and commitment.</h2>
             <p className="mt-6 text-lg leading-8 text-white/75">Become part of a professional community working to improve children’s oral health through education, prevention and collaboration.</p>
@@ -608,8 +618,8 @@ function Directory() {
               <Icon name="close" />
             </button>
             <div className="grid md:grid-cols-[0.85fr_1.15fr]">
-              <div className="min-h-80 bg-[#eaf1f5] md:min-h-[520px]">
-                <img src={selectedDoctor.image} alt={selectedDoctor.name} className={`size-full object-cover ${selectedDoctor.name === "Dr Viki" ? "object-[42%_top]" : selectedDoctor.name === "Dr Nyoni" ? "object-center" : "object-top"}`} />
+              <div className="min-h-80 bg-[#eaf1f5] md:min-h-[380px] sm:min-h-[520px]">
+                <img decoding="async" loading="lazy" src={selectedDoctor.image} alt={selectedDoctor.name} className={`size-full object-cover ${selectedDoctor.name === "Dr Viki" ? "object-[42%_top]" : selectedDoctor.name === "Dr Nyoni" ? "object-center" : "object-top"}`} />
               </div>
               <div className="flex flex-col justify-center p-7 sm:p-10">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e31e24]">ZAPD Member Doctor</p>
@@ -636,21 +646,26 @@ function Directory() {
   );
 }
 
-const SHEETS_ENDPOINT = import.meta.env.VITE_MEMBERSHIP_SHEETS_ENDPOINT as string | undefined;
-
 function Join() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!SHEETS_ENDPOINT) { setStatus("error"); return; }
+    if (status === "sending") return;
     setStatus("sending");
+    setErrorMessage("");
     const form = event.currentTarget;
     const payload = Object.fromEntries(new FormData(form).entries());
     try {
-      await fetch(SHEETS_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain" }, body: JSON.stringify({ ...payload, submittedAt: new Date().toISOString() }) });
+      const response = await fetch("/api/membership", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal: AbortSignal.timeout(25000) });
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error(result.error || "We could not confirm your application. Please contact info@zapd.org.zw.");
       setStatus("success");
       form.reset();
-    } catch { setStatus("error"); }
+    } catch (error) {
+      setErrorMessage(error instanceof Error && error.name !== "TimeoutError" && error.name !== "SyntaxError" ? error.message : "We could not confirm that your application was saved. Your details are still in the form. Please contact info@zapd.org.zw before resubmitting.");
+      setStatus("error");
+    }
   }
   return (
     <>
@@ -669,8 +684,8 @@ function Join() {
             ))}
           </div>
         </div>
-        <div className="relative min-h-[500px] overflow-hidden rounded-3xl">
-          <img src={childDentistParent} alt="A dentist welcoming a child and parent during a positive visit" className="absolute inset-0 size-full scale-[1.02] object-cover object-center saturate-[0.9] ring-8 ring-inset ring-[#00733f]/20 transition duration-700 hover:scale-[1.06]" />
+        <div className="relative min-h-[360px] sm:min-h-[500px] overflow-hidden rounded-3xl">
+          <img decoding="async" loading="lazy" src={childrenTogether} alt="Two children sharing cheerful smiles" className="absolute inset-0 size-full scale-[1.02] object-cover object-center ring-8 ring-inset ring-[#00733f]/20 transition duration-700 hover:scale-[1.06]" />
           <div className="absolute inset-x-5 bottom-5 rounded-2xl bg-white/95 p-6 shadow-xl backdrop-blur-sm">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e31e24]">Join the community</p>
             <p className="mt-2 font-display text-2xl text-[#064b7b]">Your experience and commitment can help create healthier smiles.</p>
@@ -698,20 +713,20 @@ function Join() {
             </div>
           </aside>
 
-          <form onSubmit={submit} className="rounded-3xl border border-[#064b7b]/10 bg-white p-6 shadow-xl shadow-[#064b7b]/5 sm:p-10">
+          <form onSubmit={submit} aria-busy={status === "sending"} className="min-w-0 rounded-3xl border border-[#064b7b]/10 bg-white p-6 shadow-xl shadow-[#064b7b]/5 sm:p-10">
             <div className="mb-8 border-b border-[#064b7b]/10 pb-6">
               <p className="eyebrow">Your application</p>
               <h2 className="mt-3 font-display text-3xl text-[#064b7b]">Tell us about yourself.</h2>
               <p className="mt-2 text-sm leading-6 text-[#5c7889]">Fields marked by your browser as required must be completed before submission.</p>
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
-              <label className="form-label">First name<input name="firstName" required className="form-input" /></label>
-              <label className="form-label">Last name<input name="lastName" required className="form-input" /></label>
-              <label className="form-label">Email address<input name="email" type="email" required className="form-input" /></label>
-              <label className="form-label">Phone number<input name="phone" type="tel" required className="form-input" /></label>
+              <label className="form-label">First name<input name="firstName" autoComplete="given-name" maxLength={200} required className="form-input" /></label>
+              <label className="form-label">Last name<input name="lastName" autoComplete="family-name" maxLength={200} required className="form-input" /></label>
+              <label className="form-label">Email address<input name="email" autoComplete="email" maxLength={200} type="email" required className="form-input" /></label>
+              <label className="form-label">Phone number<input name="phone" autoComplete="tel" maxLength={200} type="tel" required className="form-input" /></label>
               <label className="form-label">Professional registration number<input name="registrationNumber" className="form-input" /></label>
-              <label className="form-label">Practice or institution<input name="practice" required className="form-input" /></label>
-              <label className="form-label">City<input name="city" required className="form-input" /></label>
+              <label className="form-label">Practice or institution<input name="practice" autoComplete="organization" maxLength={200} required className="form-input" /></label>
+              <label className="form-label">City<input name="city" autoComplete="address-level2" maxLength={200} required className="form-input" /></label>
               <label className="form-label">Membership category
                 <select name="category" required className="form-input">
                   <option value="">Select a category</option>
@@ -725,10 +740,10 @@ function Join() {
                 </select>
               </label>
             </div>
-            <label className="form-label mt-5">Tell us about your interest in children’s oral health<textarea name="motivation" required rows={5} className="form-input resize-none" /></label>
+            <label className="form-label mt-5">Tell us about your interest in children’s oral health<textarea name="motivation" maxLength={3000} required rows={5} className="form-input resize-none" /></label>
             <label className="mt-5 flex items-start gap-3 text-sm text-[#4d6e82]"><input name="consent" type="checkbox" required className="mt-1 size-4 accent-[#064b7b]" />I confirm that the information provided is accurate and consent to ZAPD contacting me about this application.</label>
-            {status === "success" && <div className="mt-6 flex items-center gap-3 rounded-2xl bg-[#e6f4ec] p-4 font-semibold text-[#00733f]"><Icon name="check" />Application submitted successfully.</div>}
-            {status === "error" && <div className="mt-6 rounded-2xl bg-[#fee9e7] p-4 text-sm font-semibold text-[#b7191f]">Online submission is being connected. Please email your application details to info@zapd.org.zw in the meantime.</div>}
+            {status === "success" && <div role="status" className="mt-6 flex items-center gap-3 rounded-2xl bg-[#e6f4ec] p-4 font-semibold text-[#00733f]"><Icon name="check" />Application received. The membership team will contact you with the next steps.</div>}
+            {status === "error" && <div role="alert" className="mt-6 rounded-2xl bg-[#fee9e7] p-4 text-sm font-semibold text-[#b7191f]">{errorMessage}</div>}
             <button disabled={status === "sending"} type="submit" className="primary-button mt-7 w-full justify-center disabled:opacity-60">{status === "sending" ? "Submitting…" : "Submit application"} <Icon name="arrow" /></button>
           </form>
         </div>
@@ -736,7 +751,7 @@ function Join() {
 
       <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-[#064b7b] p-8 text-white sm:p-12">
-          <img src={dentalBlue} alt="" className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover opacity-25 mix-blend-screen md:block" />
+          <img decoding="async" loading="lazy" src={dentalBlue} alt="" className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover opacity-25 mix-blend-screen md:block" />
           <div className="relative max-w-2xl">
             <p className="eyebrow !text-[#ffed00]">Need help applying?</p>
             <h2 className="mt-4 font-display text-4xl">We’re here to answer your questions.</h2>
@@ -750,7 +765,7 @@ function Join() {
 }
 
 function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [emailOpened, setEmailOpened] = useState(false);
   return (
     <>
       <PageHero eyebrow="Contact us" title="Let’s start a conversation." text="Whether you’re a parent, dental professional or potential partner, we’d be pleased to hear from you." />
@@ -761,16 +776,16 @@ function Contact() {
             <a href="tel:+263772351666" className="contact-item"><Icon name="phone" />+263 772 351 666</a>
             <p className="contact-item"><Icon name="pin" />47 Churchill Ave, Alexandra Park, Harare</p>
           </div>
-          <img src={dentalToolsTeddy} alt="Child-friendly dental care tools with a teddy bear" className="mt-8 aspect-[4/3] w-full rounded-3xl object-cover" />
+          <img decoding="async" loading="lazy" src={dentalToolsTeddy} alt="A teddy bear beside a toothbrush and dental care tools" className="mt-8 aspect-[4/3] w-full rounded-3xl object-cover" />
         </div>
-        <form onSubmit={(event) => { event.preventDefault(); setSubmitted(true); event.currentTarget.reset(); }} className="rounded-3xl bg-[#eaf1f5] p-7">
+        <form onSubmit={(event) => { event.preventDefault(); const fields = Object.fromEntries(new FormData(event.currentTarget)); window.location.href = `mailto:info@zapd.org.zw?subject=${encodeURIComponent("Website enquiry from " + fields.name)}&body=${encodeURIComponent("Name: " + fields.name + "\nEmail: " + fields.email + "\n\n" + fields.message)}`; setEmailOpened(true); }} className="rounded-3xl bg-[#eaf1f5] p-7">
           <div className="grid gap-5 sm:grid-cols-2">
             <label className="form-label">Your name<input name="name" required className="form-input" /></label>
-            <label className="form-label">Email address<input name="email" type="email" required className="form-input" /></label>
+            <label className="form-label">Email address<input name="email" autoComplete="email" maxLength={200} type="email" required className="form-input" /></label>
           </div>
           <label className="form-label mt-5">Message<textarea name="message" required rows={5} className="form-input resize-none" /></label>
-          {submitted && <p className="mt-5 font-semibold text-[#00733f]">Thank you. We’ll be in touch soon.</p>}
-          <button className="primary-button mt-6" type="submit">Send enquiry <Icon name="arrow" /></button>
+          {emailOpened && <p role="status" className="mt-5 text-sm leading-6 text-[#00733f]">Your email app should open with your enquiry. Send the email there to contact ZAPD. If it does not open, email info@zapd.org.zw directly.</p>}
+          <button className="primary-button mt-6" type="submit">Open email enquiry <Icon name="arrow" /></button>
         </form>
       </section>
     </>
@@ -782,10 +797,10 @@ function Events() {
     <>
       <PageHero eyebrow="ZAPD Events" title="Learning, connection and collaboration." text="This space will bring together upcoming ZAPD conferences, courses, workshops, webinars and professional meetings." />
       <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-        <div className="relative min-h-[560px] overflow-hidden rounded-[2rem]">
-          <img src={dentalPink} alt="Dental models and instruments in a modern professional setting" className="absolute inset-0 size-full object-cover" />
+        <div className="relative min-h-[380px] sm:min-h-[560px] overflow-hidden rounded-[2rem]">
+          <img decoding="async" loading="lazy" src={dentalBlue} alt="Playful tooth models on a soft blue background" className="absolute inset-0 size-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#042f4d]/95 via-[#064b7b]/80 to-[#064b7b]/25" />
-          <div className="relative flex min-h-[560px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
+          <div className="relative flex min-h-[380px] sm:min-h-[560px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
             <span className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#ffed00] backdrop-blur-sm">Coming soon</span>
             <h2 className="mt-6 font-display text-4xl leading-tight sm:text-5xl">Our events calendar is on its way.</h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/75">We’re preparing a dedicated space for conferences, courses, workshops, webinars, CPD activities and other opportunities to connect with the ZAPD community.</p>
@@ -800,7 +815,7 @@ function Events() {
 }
 
 function NotFound() {
-  return <section className="mx-auto max-w-3xl px-5 py-32 text-center"><img src={squareLogo} alt="" className="mx-auto size-24" /><h1 className="mt-8 font-display text-5xl text-[#064b7b]">Page not found</h1><Link to="/" className="primary-button mt-8">Return home</Link></section>;
+  return <section className="mx-auto max-w-3xl px-5 py-32 text-center"><img decoding="async" loading="lazy" src={squareLogo} alt="" className="mx-auto size-24" /><h1 className="mt-8 font-display text-5xl text-[#064b7b]">Page not found</h1><Link to="/" className="primary-button mt-8">Return home</Link></section>;
 }
 
 export const router = createBrowserRouter([

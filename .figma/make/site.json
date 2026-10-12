@@ -1,6 +1,9 @@
 {
+  "title": "Zimbabwe Association of Paediatric Dentistry",
+  "description": "ZAPD connects dental professionals and families in Zimbabwe to support children's oral health through prevention, education and professional collaboration.",
+  "language": "en-ZW",
   "robots": {
-    "index": false
+    "index": true
   },
   "icons": {
     "icon": "/brand-assets/zapd-favicon-512.png"
