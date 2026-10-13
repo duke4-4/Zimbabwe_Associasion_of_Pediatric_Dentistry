@@ -46,6 +46,7 @@ import oralHealthEducation from "../assets/oral-health-education.jpeg"
 import dentalBlue from "../assets/dental-blue.jpg"
 
 import childrenTogether from "../assets/stock/children-together.jpg"
+import aboutZapd from "../assets/about-zapd.jpg"
 
 import smilingBoy from "../assets/stock/smiling-boy.jpg"
 
@@ -516,8 +517,7 @@ function Home() {
           <div className="relative z-10 max-w-2xl">
             <p className="eyebrow mb-5">Zimbabwe Association of Paediatric Dentistry</p>
             <h1 className="font-display text-4xl leading-[1.03] tracking-[-0.04em] text-[#064b7b] sm:text-6xl lg:text-7xl">Caring for Zimbabwe’s Children,<br /><em className="font-normal text-[#e31e24]">One Smile at a Time.</em></h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-[#4d6e82]">The Zimbabwe Association of Paediatric Dentistry (ZAPD) is a professional association committed to promoting the oral health and wellbeing of children in Zimbabwe.</p>
-            <p className="mt-4 max-w-xl leading-7 text-[#4d6e82]">We bring together dental professionals who share an interest in the care of infants, children and adolescents, creating opportunities for education, professional development, collaboration and the exchange of knowledge in paediatric dentistry.</p>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-[#4d6e82]">ZAPD brings dental professionals together to promote children’s oral health and wellbeing in Zimbabwe through education, professional development and collaboration.</p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/about" className="primary-button">Learn more <Icon name="arrow" /></Link>
               <Link to="/join" className="secondary-button">Join ZAPD</Link>
@@ -530,14 +530,13 @@ function Home() {
           <div className="relative mx-auto w-full max-w-xl lg:mr-0">
             <div className="absolute -right-16 -top-10 size-52 rounded-full bg-[#ffed00]" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[45%_45%_32px_32px] shadow-2xl shadow-[#064b7b]/15"><img decoding="async" loading="eager" fetchPriority="high" src={childBrushing} alt="A smiling child brushing her teeth" className="size-full object-cover object-top" /></div>
-            <div className="absolute -bottom-7 -left-6 max-w-56 rounded-3xl bg-white p-5 shadow-xl shadow-[#064b7b]/10 sm:-left-12"><span className="mb-3 grid size-10 place-items-center rounded-full bg-[#fee9e7] text-[#e31e24]"><Icon name="heart" /></span><p className="font-display text-xl leading-tight text-[#064b7b]">One Smile at a Time.</p></div>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-28">
         <div className="about-feature">
-          <img decoding="async" loading="lazy" src={childrenTogether} alt="Two smiling children standing back to back in colourful clothes" className="about-feature-image" />
+          <img decoding="async" loading="lazy" src={aboutZapd} alt="A smiling child with braces" className="about-feature-image" />
           <div className="about-feature-shade" aria-hidden="true" />
           <div className="about-feature-copy">
             <p className="eyebrow !text-[#ffed00]">About ZAPD</p>
