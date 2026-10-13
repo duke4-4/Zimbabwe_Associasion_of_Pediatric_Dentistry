@@ -6,7 +6,7 @@
     "index": true
   },
   "icons": {
-    "icon": "/brand-assets/zapd-favicon-512.png"
+    "icon": "/brand-assets/zapd-favicon-512.png?v=zapd"
   },
   "openGraph": {
     "image": "/brand-assets/zapd-social-share.png"
