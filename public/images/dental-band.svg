@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 180" fill="none" stroke="#63818b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+<defs>
+<g id="tooth"><path d="M12 8C0 8 0 23 5 32c3 6 3 26 9 26 5 0 4-22 10-22s5 22 10 22c6 0 6-20 9-26 5-9 5-24-7-24-5 0-8 3-12 3s-7-3-12-3Z" fill="#e2ebed"/><path d="M12 17c4 3 8 4 13 3"/></g>
+<g id="brush"><rect width="15" height="35" rx="5" fill="#e2ebed"/><path d="M15 7h10m-10 6h10m-10 6h10m-10 6h10m-10 6h10M5 35v43a3 3 0 0 0 6 0V35"/></g>
+<g id="mirror"><circle cx="16" cy="16" r="14" fill="#e2ebed"/><path d="m10 14 7-6M16 30v13m-4 0h8v38a4 4 0 0 1-8 0Z"/></g>
+<g id="floss"><rect y="12" width="43" height="42" rx="12" fill="#e2ebed"/><path d="M10 12V5h23v7M14 26h15m-13 9h11M22 5c0-19 28-15 26-1"/></g>
+<g id="paste"><path d="m5 12 30-5 10 53-30 5Z" fill="#e2ebed"/><path d="M18 65l2 10 22-4-2-10M13 27l23-4m-20 13 23-4"/></g>
+<g id="probe"><path d="M12 80V27c0-12 25-15 25-26M8 42h8v38a4 4 0 0 1-8 0Z"/></g>
+</defs>
+<use href="#tooth" transform="translate(65 48) rotate(-14 24 30)"/>
+<use href="#mirror" transform="translate(245 44) rotate(20 16 40)"/>
+<use href="#brush" transform="translate(425 52) rotate(-18 12 40)"/>
+<use href="#floss" transform="translate(590 65) rotate(12 24 30)"/>
+<use href="#tooth" transform="translate(765 42) rotate(16 24 30) scale(1.15)"/>
+<use href="#probe" transform="translate(950 47) rotate(24 16 40)"/>
+<use href="#paste" transform="translate(1125 53) rotate(-12 24 40)"/>
+</svg>

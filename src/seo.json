@@ -1,7 +1,7 @@
 {
   "siteUrl": "https://zapdnew.vercel.app",
   "siteName": "Zimbabwe Association of Paediatric Dentistry",
-  "image": "/brand-assets/zapd-social-share.png",
+  "image": "/images/zapd-social-share.png",
   "pages": {
     "/": {
       "title": "Zimbabwe Association of Paediatric Dentistry",
@@ -32,8 +32,8 @@
       "description": "Explore upcoming ZAPD conferences, courses, workshops, webinars and CPD activities in Zimbabwe, and browse the archive of past association events."
     },
     "/blog": {
-      "title": "The ZAPD Journal | Blog & News — Coming Soon",
-      "description": "Coming soon: the ZAPD Journal, with children's oral-health guidance for parents, professional perspectives and association news from Zimbabwe."
+      "title": "Resources | ZAPD",
+      "description": "Resources for parents, dental professionals and community oral-health programmes. New materials will be added as they become available."
     },
     "/contact": {
       "title": "Contact ZAPD | Paediatric Dentistry Association, Zimbabwe",

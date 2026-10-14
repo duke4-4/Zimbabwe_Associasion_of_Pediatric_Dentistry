@@ -58,7 +58,7 @@ export default function EventListing({
       )}
       <div aria-live="polite" className="grid gap-5">
         {visible.length === 0 && (
-          <div className="rounded-2xl border border-[#064b7b]/10 bg-white p-6 sm:p-8">
+          <div className="content-card rounded-2xl bg-[#eef0ef] p-6 sm:p-8">
             <h3 className="font-display text-xl text-[#064b7b]">
               {archive
                 ? "No past events published yet."
@@ -74,7 +74,7 @@ export default function EventListing({
         {visible.map((event) => (
           <article
             key={event.id}
-            className="rounded-2xl border border-[#064b7b]/10 bg-white p-6 sm:p-8"
+            className="content-card rounded-2xl bg-[#eef0ef] p-6 sm:p-8"
           >
             <p className="eyebrow">{event.category}</p>
             <h3 className="mt-3 font-display text-2xl text-[#064b7b]">

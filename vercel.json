@@ -12,6 +12,6 @@
     { "source": "/events", "destination": "/events/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
     { "source": "/contact", "destination": "/contact/index.html" },
-    { "source": "/((?!api/|assets/|brand-assets/|favicon\\.svg|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|assets/|images/|robots\\.txt|sitemap\\.xml).*)", "destination": "/index.html" }
   ]
 }

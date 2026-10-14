@@ -13,44 +13,37 @@ import PageMetadata from "./PageMetadata"
 import EventListing from "./EventListing"
 
 import Blog from "./Blog"
+import ParentQuestions from "./ParentQuestions"
 
 import BrandNavLink from "./BrandNavLink"
 import HeroArtwork from "./HeroArtwork"
+import { images } from "./images"
 
-import logo from "../assets/logo.png"
+const {
+  logo,
+  squareLogo,
+  drSheetal,
+  drViki,
+  drChipo,
+  drMadziwa,
+  drNyoni,
+  drChingwena,
+  childBrushing,
+  childDentistParent,
+  dentalToolsPink,
+  happyChild,
+  oralHealthEducation,
+  childrenTogether,
+  aboutZapd,
+  healthySmiles,
+  contactPhoto,
+  childrenBrushing,
+  familyBrushing,
+  dentalVisit,
+  smilingBoy,
+} = images
 
-import squareLogo from "../assets/squareLogo.png"
-
-import drSheetal from "../assets/drSheetal.jpg"
-
-import drViki from "../assets/drViki.jpg"
-
-import drChipo from "../assets/drChipo.jpg"
-
-import drMadziwa from "../assets/drMadziwa.jpg"
-
-import drNyoni from "../assets/drNyoni.jpg"
-
-import childBrushing from "../assets/childBrushing.jpeg"
-
-import childDentistParent from "../assets/childDentistParent.jpg"
-
-import dentalToolsTeddy from "../assets/dental-tools-teddy.jpg"
-
-import dentalToolsPink from "../assets/dental-tools-pink.jpg"
-
-import happyChild from "../assets/happy-child.jpeg"
-
-import oralHealthEducation from "../assets/oral-health-education.jpeg"
-
-import dentalBlue from "../assets/dental-blue.jpg"
-
-import childrenTogether from "../assets/stock/children-together.jpg"
-import aboutZapd from "../assets/about-zapd.jpg"
-
-import smilingBoy from "../assets/stock/smiling-boy.jpg"
-
-type IconName = "arrow" | "heart" | "book" | "spark" | "people" | "search" | "pin" | "phone" | "mail" | "menu" | "close" | "check" | "instagram" | "facebook"
+type IconName = "arrow" | "heart" | "book" | "people" | "search" | "pin" | "phone" | "mail" | "menu" | "close" | "check" | "instagram" | "facebook"
 
 function Icon({
   name,
@@ -70,10 +63,6 @@ function Icon({
 
     book: (
       <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Zm0 0V6.5M8 8h8M8 12h6" />
-    ),
-
-    spark: (
-      <path d="m12 3 1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14Z" />
     ),
 
     people: (
@@ -233,13 +222,13 @@ function Layout() {
   }, [menuOpen])
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#fbfaf6] text-[#123f60]">
+    <div className="min-h-screen overflow-x-hidden bg-[#e6e9e8] text-[#123f60]">
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
       <ScrollToTop />
       <PageMetadata />
-      <header className="sticky top-0 z-50 border-b border-[#00733f]/15 bg-[#fbfaf6]/95 shadow-[0_1px_0_rgba(0,115,63,0.05)] backdrop-blur-xl">
+      <header className="sticky top-0 z-50   bg-[#e6e9e8]/95 shadow-[0_1px_0_rgba(0,115,63,0.05)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
           <BrandLogo />
           <nav
@@ -265,7 +254,7 @@ function Layout() {
           <button
             ref={menuButton}
             onClick={() => setMenuOpen(!menuOpen)}
-            className="grid size-11 shrink-0 place-items-center rounded-full bg-[#eaf1f5] xl:hidden"
+            className="grid size-11 shrink-0 place-items-center rounded-full bg-[#dde3e3] xl:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
@@ -277,7 +266,7 @@ function Layout() {
           <nav
             id="mobile-navigation"
             aria-label="Mobile navigation"
-            className="max-h-[calc(100dvh-90px)] overflow-y-auto border-t border-[#064b7b]/10 bg-[#fbfaf6] px-5 py-5 xl:hidden"
+            className="max-h-[calc(100dvh-90px)] overflow-y-auto border-t border-[#064b7b]/10 bg-[#e6e9e8] px-5 py-5 xl:hidden"
           >
             <div className="flex flex-col gap-1">
               {nav.map(([label, path]) => (
@@ -328,7 +317,7 @@ function Footer() {
         <div className="relative mb-14 flex flex-col items-start justify-between gap-7 overflow-hidden rounded-3xl bg-[#006b3b] p-7 sm:p-10 lg:flex-row lg:items-center">
           <div className="relative">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#ffed00]">
-              Become Part of ZAPD
+              Join ZAPD
             </p>
             <h2 className="mt-3 max-w-2xl font-display text-3xl sm:text-4xl">
               Become part of a professional community committed to improving
@@ -342,9 +331,9 @@ function Footer() {
             Join ZAPD
           </Link>
         </div>
-        <div className="relative grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.25fr_0.75fr_0.75fr]">
+        <div className="relative grid gap-12   pb-14 lg:grid-cols-[1.25fr_0.75fr_0.75fr]">
           <div>
-            <div className="inline-flex rounded-2xl bg-white p-4">
+            <div className="inline-flex rounded-2xl bg-[#eef0ef] p-4">
               <BrandLogo />
             </div>
             <p className="mt-5 max-w-md leading-7 text-white/65">
@@ -401,11 +390,11 @@ function Footer() {
                 info@zapd.org.zw
               </a>
               <a
-                href="tel:+263772351666"
+                href="tel:+263773785860"
                 className="flex gap-3 hover:text-white"
               >
                 <Icon name="phone" className="size-4 shrink-0" />
-                +263 772 351 666
+                +263 773 785 860
               </a>
               <p className="flex gap-3">
                 <Icon name="pin" className="size-4 shrink-0" />
@@ -426,8 +415,6 @@ const focusAreas = [
   {
     icon: "heart" as IconName,
 
-    number: "01",
-
     title: "Prevention",
 
     text: "Promoting good oral-health practices and early preventive care to give every child the best possible start.",
@@ -436,17 +423,13 @@ const focusAreas = [
   {
     icon: "book" as IconName,
 
-    number: "02",
-
     title: "Education",
 
     text: "Providing parents, caregivers and dental professionals with accessible, evidence-based information about children’s oral health.",
   },
 
   {
-    icon: "spark" as IconName,
-
-    number: "03",
+    icon: "book" as IconName,
 
     title: "Professional Development",
 
@@ -455,8 +438,6 @@ const focusAreas = [
 
   {
     icon: "people" as IconName,
-
-    number: "04",
 
     title: "Collaboration",
 
@@ -510,9 +491,7 @@ function Home() {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-[#eaf1f5]">
-        <div className="absolute -left-32 -top-32 size-96 rounded-full border-[70px] border-white/60" />
-        <div className="absolute -bottom-32 left-1/3 size-80 rounded-full bg-[#00733f]/10 blur-3xl" />
+      <section className="relative isolate overflow-hidden bg-[#dde3e3]">
         <div className="mx-auto grid lg:min-h-[720px] max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:py-20">
           <div className="relative z-10 max-w-2xl">
             <p className="eyebrow mb-5">Zimbabwe Association of Paediatric Dentistry</p>
@@ -522,21 +501,19 @@ function Home() {
               <Link to="/about" className="primary-button">Learn more <Icon name="arrow" /></Link>
               <Link to="/join" className="secondary-button">Join ZAPD</Link>
             </div>
-            <div className="mt-12 flex items-center gap-4 border-t border-[#064b7b]/10 pt-7">
+            <div className="mt-12 flex items-center gap-4   pt-7">
               <img decoding="async" loading="lazy" src={squareLogo} alt="" className="size-12 rounded-xl object-contain" />
               <p className="text-sm font-medium text-[#4d6e82]"><strong className="text-[#064b7b]">Education, professional development,</strong><br />collaboration and the exchange of knowledge</p>
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-xl lg:mr-0">
-            <div className="absolute -right-16 -top-10 size-52 rounded-full bg-[#ffed00]" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[45%_45%_32px_32px] shadow-2xl shadow-[#064b7b]/15"><img decoding="async" loading="eager" fetchPriority="high" src={childBrushing} alt="A smiling child brushing her teeth" className="size-full object-cover object-top" /></div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl"><img decoding="async" loading="eager" fetchPriority="high" src={childBrushing} alt="A smiling child brushing her teeth" className="size-full object-cover object-top" /></div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-28">
-        <div className="about-feature">
-          <img decoding="async" loading="lazy" src={aboutZapd} alt="A smiling child with braces" className="about-feature-image" />
+      <section className="about-feature">
+          <img decoding="async" loading="lazy" src={aboutZapd} alt="A smiling child holding a toothbrush" className="about-feature-image" />
           <div className="about-feature-shade" aria-hidden="true" />
           <div className="about-feature-copy">
             <p className="eyebrow !text-[#ffed00]">About ZAPD</p>
@@ -546,8 +523,9 @@ function Home() {
             </p>
             <Link to="/about" className="mt-8 inline-flex min-h-12 items-center gap-3 border-b border-[#ffed00] pb-2 font-bold text-white transition-colors hover:text-[#ffed00]">Who we are <Icon name="arrow" /></Link>
           </div>
-        </div>
-        <FocusGrid />
+      </section>
+      <section className="dental-accent dental-accent-tools">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8"><FocusGrid /></div>
       </section>
 
       <section className="bg-[#064b7b] text-white">
@@ -556,8 +534,8 @@ function Home() {
             <img
               decoding="async"
               loading="lazy"
-              src={childDentistParent}
-              alt="A child and parent having a positive dental visit"
+              src={healthySmiles}
+              alt="Three children smiling together"
               className="absolute inset-0 size-full object-cover"
             />
             <div className="absolute bottom-4 left-4 right-4 rounded-2xl sm:bottom-6 sm:left-6 sm:right-auto sm:max-w-[calc(100%-3rem)] bg-[#ffed00] p-5 text-[#064b7b]">
@@ -590,7 +568,7 @@ function Home() {
               ].map((topic) => (
                 <div
                   key={topic}
-                  className="rounded-xl border border-white/15 px-4 py-3 text-sm font-semibold"
+                  className="rounded-xl border border-white/20 px-4 py-3 text-sm font-semibold"
                 >
                   {topic}
                 </div>
@@ -606,7 +584,8 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+      <section className="dental-accent section-mist oral-health-section">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div>
           <p className="eyebrow">Why children’s oral health matters</p>
           <h2 className="section-title mt-4">
@@ -628,7 +607,7 @@ function Home() {
 
               "Collaboration",
             ].map((item, index) => (
-              <div key={item} className="rounded-2xl bg-[#eaf1f5] p-5">
+              <div key={item} className="rounded-2xl bg-[#dde3e3] p-5">
                 <span className="font-display text-2xl text-[#e31e24]">
                   0{index + 1}
                 </span>
@@ -637,7 +616,7 @@ function Home() {
             ))}
           </div>
         </div>
-        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-full border-[14px] border-[#ffed00]">
+        <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-full  ">
           <img
             decoding="async"
             loading="lazy"
@@ -646,13 +625,14 @@ function Home() {
             className="size-full object-cover"
           />
         </div>
+              </div>
       </section>
 
-      <section className="bg-[#f1f5f7]">
+      <section className="bg-[#dce2e1]">
         <div className="mx-auto grid max-w-7xl overflow-hidden lg:grid-cols-2">
           <div className="px-5 py-20 lg:px-8 lg:py-24">
             <p className="eyebrow">Membership</p>
-            <h2 className="section-title mt-4">Become Part of ZAPD</h2>
+            <h2 className="section-title mt-4">Join ZAPD</h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#5c7889]">
               Become part of a professional community committed to improving
               children’s oral health.
@@ -705,20 +685,20 @@ function Home() {
             <Link
               key={member.name}
               to="/directory"
-              className="group overflow-hidden rounded-3xl border border-[#064b7b]/10 bg-white"
+              className="content-card group overflow-hidden rounded-3xl bg-[#eef0ef]"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-[#eaf1f5]">
+              <div className="aspect-[4/3] overflow-hidden bg-[#dde3e3]">
                 <img
                   decoding="async"
                   loading="lazy"
                   src={member.image}
                   alt={member.name}
-                  className="size-full object-cover object-top transition duration-500 group-hover:scale-105"
+                  className={`size-full transition duration-500 group-hover:scale-105 ${member.imageClass ?? "object-cover object-top"}`}
                 />
               </div>
               <div className="p-5">
                 <p className="text-xs font-bold uppercase tracking-widest text-[#e31e24]">
-                  ZAPD Member
+                  {member.role ?? "ZAPD Member"}
                 </p>
                 <h3 className="mt-2 font-display text-2xl text-[#064b7b]">
                   {member.name}
@@ -745,7 +725,7 @@ function Home() {
         <EventListing preview />
       </section>
 
-      <section className="mb-24 bg-[#eaf1f5]">
+      <section className="dental-accent dental-accent-tools bg-[#dce2e1]">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-20 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <div>
             <p className="eyebrow">Stay informed</p>
@@ -753,12 +733,12 @@ function Home() {
               Association news and updates
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-8 text-[#5c7889]">
-              Newsletter/email subscription
+              News from the association, sent by email.
             </p>
           </div>
           <form
             onSubmit={requestNewsletterSignup}
-            className="rounded-3xl bg-white p-6 shadow-sm sm:p-8"
+            className="content-card rounded-3xl bg-[#eef0ef] p-6 shadow-sm sm:p-8"
           >
             <label
               htmlFor="home-newsletter-email"
@@ -774,7 +754,7 @@ function Home() {
                 value={newsletterEmail}
                 onChange={(event) => setNewsletterEmail(event.target.value)}
                 placeholder="you@example.com"
-                className="min-w-0 flex-1 rounded-full border border-[#064b7b]/15 bg-[#fbfaf6] px-5 py-4 text-[#123f60] outline-none transition focus:border-[#064b7b] focus:ring-4 focus:ring-[#064b7b]/10"
+                className="min-w-0 flex-1 rounded-full border border-[#064b7b]/15 bg-[#e6e9e8] px-5 py-4 text-[#123f60] outline-none transition focus:border-[#064b7b] focus:ring-4 focus:ring-[#064b7b]/10"
               />
               <button
                 type="submit"
@@ -791,28 +771,15 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 pb-24 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-[#00733f]/10 before:absolute before:inset-0 before:bg-[#00733f]/10 sm:p-12">
-          <img
-            decoding="async"
-            loading="lazy"
-            src={childDentistParent}
-            alt=""
-            className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover opacity-25 mix-blend-multiply md:block"
-          />
-          <div className="relative max-w-2xl">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#e31e24]">
-              Contact ZAPD
-            </p>
-            <h2 className="mt-4 font-display text-4xl text-[#064b7b] sm:text-5xl">
-              Get in Touch
-            </h2>
-            <p className="mt-5 text-[#315d79]">
-              We would be pleased to hear from you.
-            </p>
-            <Link to="/contact" className="primary-button mt-8">
-              Get in touch <Icon name="arrow" />
-            </Link>
+      <section className="contact-band">
+        <img src={contactPhoto} alt="" loading="lazy" decoding="async" className="contact-band-image" />
+        <div className="contact-band-shade" aria-hidden="true" />
+        <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+          <div className="max-w-xl">
+            <p className="eyebrow">Contact ZAPD</p>
+            <h2 className="section-title mt-4">Get in Touch</h2>
+            <p className="mt-5 text-lg text-[#315d79]">We would be pleased to hear from you.</p>
+            <Link to="/contact" className="primary-button mt-8">Get in touch <Icon name="arrow" /></Link>
           </div>
         </div>
       </section>
@@ -822,16 +789,14 @@ function Home() {
 
 function FocusGrid() {
   return (
-    <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-[#00733f]/10 bg-[#00733f]/10 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       {focusAreas.map((area) => (
-        <article key={area.title} className="bg-[#fbfaf6] p-7 lg:p-8">
+        <article key={area.title} className="content-card rounded-3xl bg-[#eef0ef] p-6 lg:p-7">
           <div className="flex items-center justify-between">
             <span className="grid size-12 place-items-center rounded-full bg-[#00733f]/10 text-[#00733f]">
               <Icon name={area.icon} />
             </span>
-            <span className="font-display text-sm text-[#7a9588]">
-              {area.number}
-            </span>
+
           </div>
           <h3 className="mt-8 font-display text-2xl text-[#064b7b]">
             {area.title}
@@ -885,7 +850,8 @@ function About() {
         title="Who We Are"
         text="The Zimbabwe Association of Paediatric Dentistry (ZAPD) is a professional association dedicated to improving the oral health of children in Zimbabwe."
       />
-      <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+      <section className="dental-accent">
+        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
         <div className="grid items-start gap-12 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
             <p className="eyebrow">Who we are</p>
@@ -929,7 +895,7 @@ function About() {
               </h2>
             </div>
           </article>
-          <article className="mt-16 overflow-hidden rounded-3xl bg-[#eaf1f5]">
+          <article className="mt-16 overflow-hidden rounded-3xl bg-[#dde3e3]">
             <img
               decoding="async"
               loading="lazy"
@@ -947,6 +913,7 @@ function About() {
             </div>
           </article>
         </div>
+              </div>
       </section>
       <section className="relative overflow-hidden bg-[#064b7b] text-white">
         <img
@@ -957,7 +924,7 @@ function About() {
           className="absolute inset-0 size-full object-cover object-center opacity-55"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#064b7b]/95 via-[#064b7b]/80 to-[#064b7b]/55" />
-        <div className="absolute -right-32 -top-32 size-96 rounded-full border-[80px] border-white/5" />
+        <div className="absolute -right-32 -top-32 size-96 rounded-full  " />
         <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr]">
             <div>
@@ -974,7 +941,7 @@ function About() {
               {objectives.map((objective, index) => (
                 <article
                   key={objective}
-                  className={`rounded-2xl border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm ${
+                  className={`rounded-2xl   bg-[#eef0ef]/[0.06] p-5 backdrop-blur-sm ${
                     index === objectives.length - 1 ? "sm:col-span-2" : ""
                   }`}
                 >
@@ -986,7 +953,7 @@ function About() {
               ))}
             </div>
           </div>
-          <div className="mt-16 border-t border-white/10 pt-10">
+          <div className="mt-16   pt-10">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#ffed00]">
               Our values
             </p>
@@ -1004,19 +971,11 @@ function About() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
-        <div className="relative min-h-[380px] sm:min-h-[520px] overflow-hidden rounded-[2rem]">
-          <img
-            decoding="async"
-            loading="lazy"
-            src={dentalBlue}
-            alt="White tooth models and dental tools on a soft blue background"
-            className="absolute inset-0 size-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#042f4d]/95 via-[#064b7b]/75 to-transparent" />
-          <div className="relative flex min-h-[380px] sm:min-h-[520px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-2xl bg-[#064b7b]">
+          <div className="relative flex max-w-3xl flex-col items-start justify-center p-8 text-white sm:p-12">
             <p className="eyebrow !text-[#ffed00]">Become a member</p>
             <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-              Become Part of ZAPD
+              Join ZAPD
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/75">
               Membership of the Zimbabwe Association of Paediatric Dentistry
@@ -1032,7 +991,7 @@ function About() {
           </div>
         </div>
       </section>
-      <section id="committee" className="scroll-mt-20 bg-[#eaf1f5]">
+      <section id="committee" className="scroll-mt-20 bg-[#dde3e3]">
         <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
@@ -1048,11 +1007,11 @@ function About() {
               View member directory <Icon name="arrow" />
             </Link>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-4 min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-10 grid grid-cols-1 gap-6 min-[400px]:grid-cols-2 lg:grid-cols-3">
             {members.map((member) => (
               <article
                 key={member.name}
-                className="group overflow-hidden rounded-2xl bg-white"
+                className="group overflow-hidden rounded-2xl bg-[#eef0ef]"
               >
                 <div className="aspect-[4/5] overflow-hidden bg-[#dfeaf0]">
                   <img
@@ -1065,7 +1024,7 @@ function About() {
                 </div>
                 <div className="p-4">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-[#e31e24]">
-                    ZAPD Member
+                    {member.role ?? "ZAPD Member"}
                   </p>
                   <h3 className="mt-1 font-display text-lg text-[#064b7b]">
                     {member.name}
@@ -1080,32 +1039,6 @@ function About() {
   )
 }
 
-const parentTopics = [
-  "When should my child first see a dentist?",
-
-  "Baby teeth matter",
-
-  "Toothbrushing",
-
-  "Fluoride and toothpaste",
-
-  "Diet and children’s teeth",
-
-  "Preventing tooth decay",
-
-  "Dental anxiety",
-
-  "Dental emergencies",
-
-  "Children’s dental development",
-
-  "Dental injuries",
-
-  "Special care needs",
-
-  "Frequently asked questions",
-]
-
 function Parents() {
   return (
     <>
@@ -1114,43 +1047,18 @@ function Parents() {
         title="Your child’s smile starts early."
         text="Practical information to help you understand and care for your child’s oral health."
       />
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 lg:grid-cols-2 lg:px-8">
-        <figure className="self-start overflow-hidden rounded-3xl bg-[#eaf1f5]">
-          <img
-            decoding="async"
-            loading="lazy"
-            src={dentalBlue}
-            alt="Playful tooth models on a soft blue background"
-            className="aspect-[4/3] w-full object-cover object-[70%_center]"
-          />
-          <figcaption className="border-l-4 border-[#00733f] px-6 py-5 text-[#064b7b] sm:px-8">
-            <strong className="font-display text-2xl">Baby teeth matter</strong>
-            <p className="font-semibold">Your Child’s Smile Starts Early</p>
-          </figcaption>
-        </figure>
-        <div className="flex flex-col justify-center">
-          <h2 className="section-title">
-            Children’s dental care begins long before the first permanent teeth
-            appear.
-          </h2>
-          <p className="mt-5 leading-8 text-[#5c7889]">
-            Children’s dental care begins long before the first permanent teeth
-            appear. Healthy baby teeth are important for eating, speaking,
-            development and maintaining space for permanent teeth. Establishing
-            good oral-health habits early can also help children develop a
-            positive attitude towards dental care.
-          </p>
-          <div className="mt-8 grid gap-3">
-            {parentTopics.map((topic) => (
-              <article
-                key={topic}
-                className="flex items-center justify-between rounded-2xl border border-[#064b7b]/10 bg-white px-5 py-4 font-semibold"
-              >
-                <span>{topic}</span>
-                <Icon name="check" className="size-4 shrink-0 text-[#00733f]" />
-              </article>
-            ))}
+      <section className="dental-accent section-mist">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
+          <div className="parent-intro">
+            <img src={childrenBrushing} alt="Two children brushing their teeth together" loading="lazy" decoding="async" className="parent-intro-image" />
+            <div>
+              <p className="eyebrow">Caring for growing teeth</p>
+              <h2 className="mt-4 font-display text-3xl leading-tight text-[#064b7b] sm:text-4xl">Good habits start with baby teeth.</h2>
+              <p className="mt-5 leading-8 text-[#4d6e82]">Baby teeth help children eat, speak and make space for their adult teeth. A daily routine and early dental visits can help your child feel comfortable caring for their smile.</p>
+              <p className="mt-4 leading-8 text-[#4d6e82]">Find answers below about everyday care, first visits and what to do when something is wrong.</p>
+            </div>
           </div>
+          <ParentQuestions />
         </div>
       </section>
       <ParentGallery />
@@ -1161,31 +1069,31 @@ function Parents() {
 function ParentGallery() {
   const cards = [
     {
-      image: childBrushing,
+      image: familyBrushing,
 
       title: "Toothbrushing",
 
-      alt: "A child practising toothbrushing at home",
+      alt: "A mother and child brushing their teeth together",
 
       text: "Establishing good oral-health habits early can also help children develop a positive attitude towards dental care.",
     },
 
     {
-      image: dentalToolsTeddy,
+      image: dentalVisit,
 
       title: "Dental anxiety",
 
-      alt: "A teddy bear beside a toothbrush and dental care tools",
+      alt: "A dentist helping a child feel comfortable during a dental visit",
 
       text: "Practical information to help you understand and care for your child’s oral health.",
     },
 
     {
-      image: childDentistParent,
+      image: childrenBrushing,
 
       title: "Baby teeth matter",
 
-      alt: "A parent supporting a child at the dentist",
+      alt: "Children caring for their teeth with daily brushing",
 
       text: "Healthy baby teeth are important for eating, speaking, development and maintaining space for permanent teeth.",
     },
@@ -1197,7 +1105,7 @@ function ParentGallery() {
         {cards.map((card) => (
           <article
             key={card.title}
-            className="overflow-hidden rounded-3xl border border-[#064b7b]/10 bg-white"
+            className="content-card overflow-hidden rounded-3xl bg-[#eef0ef]"
           >
             <img
               loading="lazy"
@@ -1295,10 +1203,11 @@ function Membership() {
         title="Become part of ZAPD."
         text="Membership of the Zimbabwe Association of Paediatric Dentistry provides an opportunity to connect with colleagues who share an interest in children’s oral health."
       />
-      <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 lg:grid-cols-2 lg:px-8">
+      <section className="dental-accent">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 lg:grid-cols-2 lg:px-8">
         <div>
           <p className="eyebrow">Membership</p>
-          <h2 className="section-title mt-4">Become Part of ZAPD</h2>
+          <h2 className="section-title mt-4">Join ZAPD</h2>
           <div className="mt-6 space-y-5 text-lg leading-8 text-[#5c7889]">
             <p>
               Membership of the Zimbabwe Association of Paediatric Dentistry
@@ -1316,7 +1225,7 @@ function Membership() {
             Start your application <Icon name="arrow" />
           </Link>
         </div>
-        <figure className="overflow-hidden rounded-3xl border border-[#064b7b]/10 bg-white">
+        <figure className="content-card overflow-hidden rounded-3xl bg-[#eef0ef]">
           <img
             decoding="async"
             loading="lazy"
@@ -1324,7 +1233,7 @@ function Membership() {
             alt="Tooth models, a dental teaching model and care tools on a pastel pink background"
             className="aspect-[5/4] w-full object-cover object-center"
           />
-          <figcaption className="flex flex-wrap items-baseline justify-between gap-3 border-t border-[#064b7b]/10 px-6 py-5">
+          <figcaption className="flex flex-wrap items-baseline justify-between gap-3   px-6 py-5">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e31e24]">
               Collaboration
             </p>
@@ -1333,6 +1242,7 @@ function Membership() {
             </p>
           </figcaption>
         </figure>
+              </div>
       </section>
 
       <section className="bg-[#064b7b] text-white">
@@ -1352,7 +1262,7 @@ function Membership() {
               {benefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.06] p-5"
+                  className="flex items-center gap-4 rounded-2xl   bg-[#eef0ef]/[0.06] p-5"
                 >
                   <span className="grid size-8 shrink-0 place-items-center rounded-full bg-white text-[#00733f]">
                     <Icon name="check" className="size-4" />
@@ -1365,7 +1275,7 @@ function Membership() {
         </div>
       </section>
 
-      <section className="bg-[#eaf1f5]">
+      <section className="bg-[#dde3e3]">
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
           <div className="max-w-3xl">
             <p className="eyebrow">Proposed membership categories</p>
@@ -1382,7 +1292,7 @@ function Membership() {
             {categories.map((category, index) => (
               <article
                 key={category.title}
-                className="rounded-2xl border border-[#064b7b]/10 bg-white p-6"
+                className="rounded-2xl   bg-[#eef0ef] p-6"
               >
                 <div className="flex items-start gap-5">
                   <span className="font-display text-2xl text-[#e31e24]">
@@ -1421,7 +1331,7 @@ function Membership() {
           <div className="relative flex min-h-[360px] sm:min-h-[500px] max-w-2xl flex-col items-start justify-center p-8 text-white sm:p-12 lg:p-16">
             <p className="eyebrow !text-[#ffed00]">Ready to join?</p>
             <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-              Become Part of ZAPD
+              Join ZAPD
             </h2>
             <p className="mt-6 text-lg leading-8 text-white/75">
               Become part of a professional community committed to improving
@@ -1441,23 +1351,12 @@ function Membership() {
 }
 
 const members = [
+  { name: "Dr Chipo Farirayi", image: drChipo, email: "info@zapd.org.zw", role: "President" },
   { name: "Dr Sheetal Bhaskar", image: drSheetal, email: "info@zapd.org.zw" },
-
-  { name: "Dr Viki", image: drViki, email: "info@zapd.org.zw" },
-
-  { name: "Dr Chipo Farirayi", image: drChipo, email: "info@zapd.org.zw" },
-
-  { name: "Dr Madziwa", image: drMadziwa, email: "info@zapd.org.zw" },
-
-  {
-    name: "Dr Nyoni",
-
-    image: drNyoni,
-
-    email: "info@zapd.org.zw",
-
-    imageClass: "object-cover object-[center_22%]",
-  },
+  { name: "Dr Ruvarashe Nyoni-Kusema", image: drNyoni, email: "info@zapd.org.zw", imageClass: "object-cover object-[center_22%]" },
+  { name: "Dr Chingwena", image: drChingwena, email: "info@zapd.org.zw" },
+  { name: "Dr Constance V Viki", image: drViki, email: "info@zapd.org.zw" },
+  { name: "Dr Rumbidzo L Madziwa-Manana", image: drMadziwa, email: "info@zapd.org.zw" },
 ]
 
 function Directory() {
@@ -1516,7 +1415,7 @@ function Directory() {
           </p>
         </div>
         {matchingMembers.length === 0 && (
-          <div className="rounded-2xl border border-[#064b7b]/10 bg-white p-8">
+          <div className="rounded-2xl   bg-[#eef0ef] p-8">
             <h2 className="font-display text-xl">No matching members</h2>
             <p className="mt-2 text-[#5c7889]">
               Try another name or contact ZAPD for help finding care.
@@ -1533,9 +1432,9 @@ function Directory() {
           {matchingMembers.map((member) => (
             <article
               key={member.name}
-              className="overflow-hidden rounded-3xl border border-[#064b7b]/10 bg-white"
+              className="content-card overflow-hidden rounded-3xl bg-[#eef0ef]"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-[#eaf1f5]">
+              <div className="aspect-[4/3] overflow-hidden bg-[#dde3e3]">
                 <img
                   src={member.image}
                   alt={`${member.name}, ZAPD member doctor`}
@@ -1544,7 +1443,7 @@ function Directory() {
               </div>
               <div className="p-6">
                 <p className="text-xs font-bold uppercase tracking-widest text-[#e31e24]">
-                  ZAPD Member
+                  {member.role ?? "ZAPD Member"}
                 </p>
                 <h2 className="mt-2 font-display text-2xl text-[#064b7b]">
                   {member.name}
@@ -1602,24 +1501,18 @@ function Directory() {
               <Icon name="close" />
             </button>
             <div className="grid md:grid-cols-[0.85fr_1.15fr]">
-              <div className="min-h-80 bg-[#eaf1f5] md:min-h-[380px] sm:min-h-[520px]">
+              <div className="min-h-80 bg-[#dde3e3] md:min-h-[380px] sm:min-h-[520px]">
                 <img
                   decoding="async"
                   loading="lazy"
                   src={selectedDoctor.image}
                   alt={selectedDoctor.name}
-                  className={`size-full object-cover ${
-                    selectedDoctor.name === "Dr Viki"
-                      ? "object-[42%_top]"
-                      : selectedDoctor.name === "Dr Nyoni"
-                        ? "object-center"
-                        : "object-top"
-                  }`}
+                  className={`size-full ${selectedDoctor.imageClass ?? "object-cover object-top"}`}
                 />
               </div>
               <div className="flex flex-col justify-center p-7 sm:p-10">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e31e24]">
-                  ZAPD Member Doctor
+                  {selectedDoctor.role ?? "ZAPD Member Doctor"}
                 </p>
                 <h2
                   id="doctor-name"
@@ -1627,7 +1520,7 @@ function Directory() {
                 >
                   {selectedDoctor.name}
                 </h2>
-                <div className="mt-8 border-t border-[#064b7b]/10 pt-7">
+                <div className="mt-8   pt-7">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#6f8a9b]">
                     How to reach this doctor
                   </p>
@@ -1637,15 +1530,15 @@ function Directory() {
                   </p>
                   <a
                     href={`mailto:${selectedDoctor.email}?subject=Enquiry for ${selectedDoctor.name}`}
-                    className="mt-5 flex items-center gap-3 rounded-2xl bg-[#eaf1f5] p-4 font-semibold text-[#064b7b]"
+                    className="mt-5 flex items-center gap-3 rounded-2xl bg-[#dde3e3] p-4 font-semibold text-[#064b7b]"
                   >
                     <Icon name="mail" /> {selectedDoctor.email}
                   </a>
                   <a
-                    href="tel:+263772351666"
-                    className="mt-3 flex items-center gap-3 rounded-2xl bg-[#eaf1f5] p-4 font-semibold text-[#064b7b]"
+                    href="tel:+263773785860"
+                    className="mt-3 flex items-center gap-3 rounded-2xl bg-[#dde3e3] p-4 font-semibold text-[#064b7b]"
                   >
-                    <Icon name="phone" /> +263 772 351 666
+                    <Icon name="phone" /> +263 773 785 860
                   </a>
                 </div>
               </div>
@@ -1720,7 +1613,7 @@ function Join() {
       />
 
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 lg:grid-cols-2 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] border border-[#00733f]/15 bg-[#f1f5f7] p-7  sm:p-10">
+        <div className="relative overflow-hidden rounded-[2rem]   bg-[#dce2e1] p-7  sm:p-10">
           <p className="eyebrow">Before you apply</p>
           <h2 className="section-title mt-4">Online membership applications</h2>
           <p className="mt-6 text-lg leading-8 text-[#5c7889]">
@@ -1740,7 +1633,7 @@ function Join() {
             ].map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 rounded-2xl bg-[#eaf1f5] p-4 font-semibold text-[#315d79]"
+                className="flex items-center gap-3 rounded-2xl bg-[#dde3e3] p-4 font-semibold text-[#315d79]"
               >
                 <span className="grid size-7 shrink-0 place-items-center rounded-full bg-white text-[#00733f]">
                   <Icon name="check" className="size-4" />
@@ -1758,7 +1651,7 @@ function Join() {
             alt="Two children sharing cheerful smiles"
             className="h-72 w-full object-cover object-center sm:absolute sm:inset-0 sm:size-full"
           />
-          <div className="relative bg-white p-6 sm:absolute sm:inset-x-5 sm:bottom-5 sm:rounded-2xl sm:bg-white/95 sm:shadow-sm">
+          <div className="relative bg-[#eef0ef] p-6 sm:absolute sm:inset-x-5 sm:bottom-5 sm:rounded-2xl sm:bg-[#eef0ef]/95 sm:shadow-sm">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e31e24]">
               Join ZAPD
             </p>
@@ -1770,7 +1663,7 @@ function Join() {
         </div>
       </section>
 
-      <section className="bg-[#eaf1f5]">
+      <section className="bg-[#dde3e3]">
         <div className="mx-auto grid max-w-7xl items-start gap-10 px-5 py-24 lg:grid-cols-[0.65fr_1.35fr] lg:px-8">
           <aside className="lg:sticky lg:top-28">
             <p className="eyebrow">How it works</p>
@@ -1805,7 +1698,7 @@ function Join() {
               ].map(([number, title, text]) => (
                 <article
                   key={number}
-                  className="rounded-2xl border border-[#064b7b]/10 bg-white p-5"
+                  className="rounded-2xl   bg-[#eef0ef] p-5"
                 >
                   <span className="text-xs font-bold tracking-widest text-[#e31e24]">
                     {number}
@@ -1824,9 +1717,9 @@ function Join() {
           <form
             onSubmit={submit}
             aria-busy={status === "sending"}
-            className="min-w-0 rounded-3xl border border-[#064b7b]/10 bg-white p-6 shadow-sm sm:p-10"
+            className="min-w-0 rounded-3xl   bg-[#eef0ef] p-6 shadow-sm sm:p-10"
           >
-            <div className="mb-8 border-b border-[#064b7b]/10 pb-6">
+            <div className="mb-8   pb-6">
               <p className="eyebrow">Your application</p>
               <h2 className="mt-3 font-display text-3xl text-[#064b7b]">
                 Membership application
@@ -1967,13 +1860,6 @@ function Join() {
 
       <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl bg-[#064b7b] p-8 text-white sm:p-12">
-          <img
-            decoding="async"
-            loading="lazy"
-            src={dentalBlue}
-            alt=""
-            className="absolute inset-y-0 right-0 hidden h-full w-1/2 object-cover opacity-25 mix-blend-screen md:block"
-          />
           <div className="relative max-w-2xl">
             <p className="eyebrow !text-[#ffed00]">Need help applying?</p>
             <h2 className="mt-4 font-display text-4xl">Get in Touch</h2>
@@ -2010,9 +1896,9 @@ function Contact() {
               <Icon name="mail" />
               info@zapd.org.zw
             </a>
-            <a href="tel:+263772351666" className="contact-item">
+            <a href="tel:+263773785860" className="contact-item">
               <Icon name="phone" />
-              +263 772 351 666
+              +263 773 785 860
             </a>
             <p className="contact-item">
               <Icon name="pin" />
@@ -2022,9 +1908,9 @@ function Contact() {
           <img
             decoding="async"
             loading="lazy"
-            src={dentalToolsTeddy}
-            alt="A teddy bear beside a toothbrush and dental care tools"
-            className="mt-8 aspect-[4/3] w-full rounded-3xl object-cover"
+            src={contactPhoto}
+            alt="A woman speaking on the phone"
+            className="contact-portrait mt-8 h-auto w-full rounded-2xl"
           />
         </div>
         <form
@@ -2037,7 +1923,7 @@ function Contact() {
 
             setEmailOpened(true)
           }}
-          className="rounded-3xl bg-[#eaf1f5] p-7"
+          className="rounded-3xl bg-[#dde3e3] p-7"
         >
           <div className="grid gap-5 sm:grid-cols-2">
             <label className="form-label">
@@ -2123,7 +2009,8 @@ function Events() {
         title="ZAPD Events"
         text="Explore ZAPD conferences, courses, workshops, webinars, CPD activities, professional meetings and association events."
       />
-      <section className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+      <section className="dental-accent section-mist">
+        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
         <div className="mb-12">
           <h2 className="section-title mb-8">Events calendar.</h2>
           <EventListing />
@@ -2132,8 +2019,8 @@ function Events() {
           <img
             decoding="async"
             loading="lazy"
-            src={dentalBlue}
-            alt="Playful tooth models on a soft blue background"
+            src={childrenBrushing}
+            alt="Two children brushing their teeth together"
             className="absolute inset-0 size-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#042f4d]/95 via-[#064b7b]/80 to-[#064b7b]/25" />
@@ -2156,6 +2043,7 @@ function Events() {
             </a>
           </div>
         </div>
+              </div>
       </section>
     </>
   )

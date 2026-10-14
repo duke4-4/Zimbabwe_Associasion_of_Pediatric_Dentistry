@@ -8,7 +8,7 @@ const image = seo.siteUrl + seo.image;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": `${seo.siteUrl}/#organization`, name: seo.siteName, alternateName: "ZAPD", url: seo.siteUrl + "/", logo: seo.siteUrl + "/brand-assets/zapd-favicon-512.png", email: "info@zapd.org.zw", telephone: "+263772351666", address: { "@type": "PostalAddress", streetAddress: "47 Churchill Ave, Alexandra Park", addressLocality: "Harare", addressCountry: "ZW" }, sameAs: ["https://www.instagram.com/zim.paeds.dentistryassociation/", "https://www.facebook.com/ZAPD"] },
+    { "@type": "Organization", "@id": `${seo.siteUrl}/#organization`, name: seo.siteName, alternateName: "ZAPD", url: seo.siteUrl + "/", logo: seo.siteUrl + "/images/zapd-favicon-512.png", email: "info@zapd.org.zw", telephone: "+263773785860", address: { "@type": "PostalAddress", streetAddress: "47 Churchill Ave, Alexandra Park", addressLocality: "Harare", addressCountry: "ZW" }, sameAs: ["https://www.instagram.com/zim.paeds.dentistryassociation/", "https://www.facebook.com/ZAPD"] },
     { "@type": "WebSite", "@id": `${seo.siteUrl}/#website`, name: seo.siteName, alternateName: "ZAPD", url: seo.siteUrl + "/", inLanguage: "en-ZW", publisher: { "@id": `${seo.siteUrl}/#organization` } }
   ]
 };

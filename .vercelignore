@@ -1,0 +1,14 @@
+reference-assets/
+public/ZAPD - */
+public/zapd5/
+.tmp/
+.tmp-*/
+node_modules/
+dist/
+build/
+playwright-report/
+test-results/
+*.zip
+*.7z
+*.rar
+*.log

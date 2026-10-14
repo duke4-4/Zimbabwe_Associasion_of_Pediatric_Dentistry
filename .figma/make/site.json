@@ -6,10 +6,10 @@
     "index": true
   },
   "icons": {
-    "icon": "/brand-assets/zapd-favicon-512.png?v=zapd"
+    "icon": "/images/zapd-favicon-512.png?v=zapd"
   },
   "openGraph": {
-    "image": "/brand-assets/zapd-social-share.png"
+    "image": "/images/zapd-social-share.png"
   },
   "accessibility": {
     "addBypassLinks": false,
