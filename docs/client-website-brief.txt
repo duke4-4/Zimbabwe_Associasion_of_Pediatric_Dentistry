@@ -1,0 +1,1082 @@
+--- PAGE 1 ---
+ 
+ 
+    
+ZAPD  WEBSITE  PROJECT 
+Website  Content  &  Development  Brief 
+Zimbabwe  Association  of  Paediatric  Dentistry  
+ 
+
+--- PAGE 2 ---
+ 
+Contents 
+ 
+DOMAIN 
+DOCTORS  HEADSHOTS 
+STOCK  IMAGES 
+SOCIAL  MEDIA  LOG  INS 
+FOR  CONTACT  US 
+WEBSITE  LAYOUT 1.  MAIN  NAVIGATION 2.  HOME  PAGE 3.  ABOUT  ZAPD 4.  PARENTS  &  CAREGIVERS 5.  FOR  DENTAL  PROFESSIONALS 6.  MEMBERSHIP 7.  EVENTS 8.  BLOG  &  NEWS 9.  FIND  A  PAEDIATRIC  DENTIST 10.  CONTACT  US 11.  FOOTER 12.  DESIGN  DIRECTION 13.  FEATURES  WE  WOULD  LIKE  TO  BUILD  IN 14.  CONTENT  WE  ARE  DELIBERATELY  NOT  INCLUDING 15.  OVERALL  BRAND  MESSAGE  
+Zimbabwe  Association  of  Paediatric  DentistryPage  2 
+
+--- PAGE 3 ---
+ 
+  DOMAIN  
+zapd.org.zw 
+  DOCTORS  HEADSHOTS  
+Here  is  the  link  to  the  folder  with  Doctor  Headshots 
+  STOCK  IMAGES  
+Here  is  the  link  to  the  folder  with  Stock  Images  to  use  for  the  site -   You  are  welcome  to  source  more  as  you  see  fit  
+  SOCIAL  MEDIA  LOG  INS  
+Instagram IG:  zim.paeds.dentistryassociation 
+Facebook  ZAPD 
+ZAPD  Email  Details Username:  info@zapd.org.zw  
+ 
+  FOR  CONTACT  US  
+•
+ Physical  Address  -   47  Churchill  Ave,  Alex  Park,,  Harare,  Zimbabwe  
+•
+ Emails  -   info@zapd.org.zw  
+•
+ Phone  Number  –  0772  351  666  
+Zimbabwe  Association  of  Paediatric  DentistryPage  3 
+
+--- PAGE 4 ---
+ 
+  WEBSITE  LAYOUT  
+ 
+●
+ 
+We
+ 
+would
+ 
+like
+ 
+the
+ 
+website
+ 
+to
+ 
+have
+ 
+a
+ 
+professional,
+ 
+modern
+ 
+and
+ 
+welcoming
+ 
+appearance,
+ 
+suitable
+ 
+for
+ 
+a
+ 
+national
+ 
+professional
+ 
+dental
+ 
+association.
+ 
+ 
+●
+ 
+We
+ 
+would
+ 
+like
+ 
+to
+ 
+use
+ 
+the
+ 
+South
+ 
+African
+ 
+Association
+ 
+of
+ 
+Paediatric
+ 
+Dentistry
+ 
+(SAAPD)
+ 
+website
+ 
+as
+ 
+a
+ 
+general
+ 
+reference
+ 
+for
+ 
+structure
+ 
+and
+ 
+functionality,
+ 
+but
+ 
+the
+ 
+ZAPD
+ 
+website
+ 
+should
+ 
+have
+ 
+its
+ 
+own
+ 
+identity,
+ 
+design
+ 
+and
+ 
+personalised
+ 
+wording.
+ 
+●
+ 
+The
+ 
+website
+ 
+should
+ 
+be
+ 
+designed
+ 
+to
+ 
+serve
+ 
+both
+ 
+dental
+ 
+professionals
+ 
+and
+ 
+parents/caregivers,
+ 
+with
+ 
+clear
+ 
+navigation
+ 
+and
+ 
+a
+ 
+strong
+ 
+emphasis
+ 
+on
+ 
+children's
+ 
+oral
+ 
+health.
+ 
+1.  MAIN  NAVIGATION  
+The  proposed  main  menu  is:  
+•
+ Home  
+•
+ About  ZAPD  
+•
+ Parents  &  Caregivers  
+•
+ For  Dental  Professionals  
+•
+ Membership  
+•
+ Events  
+•
+ Blog  &  News  
+•
+ Find  a  Paediatric  Dentist  
+•
+ Contact  Us  
+A  Join  ZAPD  /  Membership  button  can  also  be  prominently  displayed.  
+2.  HOME  PAGE  
+Hero  Section  
+•
+ Zimbabwe  Association  of  Paediatric  Dentistry  
+•
+ Caring  for  Zimbabwe's  Children,  One  Smile  at  a  Time  
+•
+ The  Zimbabwe  Association  of  Paediatric  Dentistry  (ZAPD)  is  a  professional  association  committed  to  
+promoting
+ 
+the
+ 
+oral
+ 
+health
+ 
+and
+ 
+wellbeing
+ 
+of
+ 
+children
+ 
+in
+ 
+Zimbabwe.
+ 
+•
+ We  bring  together  dental  professionals  who  share  an  interest  in  the  care  of  infants,  children  and  
+adolescents,
+ 
+creating
+ 
+opportunities
+ 
+for
+ 
+education,
+ 
+professional
+ 
+development,
+ 
+collaboration
+ 
+and
+ 
+the
+ 
+exchange
+ 
+of
+ 
+knowledge
+ 
+in
+ 
+paediatric
+ 
+dentistry.
+ 
+Buttons: 
+•
+ Learn  More  |  Join  ZAPD  
+Zimbabwe  Association  of  Paediatric  DentistryPage  4 
+
+--- PAGE 5 ---
+ 
+Our  Focus  
+The  homepage  should  introduce  four  key  areas:  
+Prevention Promoting  good  oral-health  practices  and  early  preventive  care  to  give  every  child  the  best  possible  start.  
+Education Providing  parents,  caregivers  and  dental  professionals  with  accessible,  evidence-based  information  about  
+children's
+ 
+oral
+ 
+health.
+ 
+Professional  Development Creating  opportunities  for  dental  professionals  to  develop  their  knowledge  and  skills  in  the  care  of  
+children.
+ 
+Collaboration Building  a  community  of  dental  professionals  who  can  learn  from  one  another  and  work  together  to  
+improve
+ 
+children's
+ 
+oral
+ 
+health
+ 
+in
+ 
+Zimbabwe.
+ 
+Why  Children's  Oral  Health  Matters  
+•
+ A  child's  oral  health  is  an  important  part  of  their  overall  health,  development  and  quality  of  life.  
+•
+ Good  oral-health  habits  begin  early.  Regular  dental  care,  prevention  and  timely  management  of  
+dental
+ 
+problems
+ 
+can
+ 
+help
+ 
+children
+ 
+grow
+ 
+with
+ 
+healthy
+ 
+smiles
+ 
+and
+ 
+establish
+ 
+positive
+ 
+attitudes
+ 
+towards
+ 
+oral
+ 
+health
+ 
+that
+ 
+last
+ 
+into
+ 
+adulthood.
+ 
+•
+ ZAPD  seeks  to  support  children,  families  and  dental  professionals  through  education,  collaboration  
+and
+ 
+the
+ 
+promotion
+ 
+of
+ 
+quality
+ 
+paediatric
+ 
+dental
+ 
+care.
+ 
+Quick  Links  
+For  Parents  &  Caregivers Practical  information  to  help  you  understand  and  care  for  your  child's  oral  health.  
+For  Dental  Professionals Educational  opportunities,  professional  resources  and  a  community  for  those  involved  in  the  care  of  
+children.
+ 
+Events Conferences,  courses,  workshops,  webinars  and  other  ZAPD  activities.  
+Membership Become  part  of  a  professional  community  committed  to  improving  children's  oral  health.  
+A  section  for  Upcoming  Events  and  a  section  for  Latest  News/Blog  Posts  should  also  appear  on  the  
+homepage.
+ 
+Zimbabwe  Association  of  Paediatric  DentistryPage  5 
+
+--- PAGE 6 ---
+ 
+3.  ABOUT  ZAPD  
+Who  We  Are  
+The  Zimbabwe  Association  of  Paediatric  Dentistry  (ZAPD)  is  a  professional  association  dedicated  to  
+improving
+ 
+the
+ 
+oral
+ 
+health
+ 
+of
+ 
+children
+ 
+in
+ 
+Zimbabwe.
+ 
+The  Association  provides  a  platform  for  dental  professionals  with  an  interest  in  paediatric  dentistry  to  
+connect,
+ 
+share
+ 
+knowledge,
+ 
+support
+ 
+professional
+ 
+development
+ 
+and
+ 
+contribute
+ 
+to
+ 
+improved
+ 
+oral-health
+ 
+outcomes
+ 
+for
+ 
+children.
+ 
+We  recognise  that  caring  for  children  requires  an  approach  that  considers  not  only  their  teeth,  but  also  their  
+growth,
+ 
+development,
+ 
+emotional
+ 
+wellbeing,
+ 
+family
+ 
+environment
+ 
+and
+ 
+individual
+ 
+needs.
+ 
+Vision  
+A  Zimbabwe  where  every  child  has  the  opportunity  to  grow  with  good  oral  health  and  a  positive  
+relationship
+ 
+with
+ 
+dental
+ 
+care.
+ 
+Mission  
+To  promote  excellence  in  the  prevention,  education  and  provision  of  paediatric  dental  care  through  
+professional
+ 
+development,
+ 
+collaboration
+ 
+and
+ 
+public
+ 
+education.
+ 
+Objectives  
+ZAPD  aims  to:  
+•
+ Promote  the  importance  of  oral  health  from  infancy  through  adolescence.  
+•
+ Encourage  prevention  and  early  intervention  in  children's  oral  healthcare.  
+•
+ Promote  evidence-based  approaches  to  paediatric  dental  care.  
+•
+ Provide  opportunities  for  continuing  professional  development.  
+•
+ Facilitate  the  sharing  of  knowledge  and  clinical  experience  among  dental  professionals.  
+•
+ Support  education  of  parents,  caregivers  and  communities  about  children's  oral  health.  
+•
+ Encourage  collaboration  between  dental  professionals  and  other  healthcare  professionals  involved  in  
+the
+ 
+care
+ 
+of
+ 
+children.
+ 
+•
+ Support  initiatives  that  contribute  to  improved  oral-health  outcomes  for  children  in  Zimbabwe.  
+•
+ Create  a  professional  network  for  individuals  with  an  interest  in  paediatric  dentistry.  
+Our  Values  
+Child-centred  care  |  Prevention  |  Excellence  |  Collaboration  |  Integrity  |  Inclusivity 
+There  should  also  be  a  section  for:  
+Executive  Committee  
+This  will  include  photographs,  names,  professional  titles  and  positions  of  the  ZAPD  Executive  Committee.  
+Zimbabwe  Association  of  Paediatric  DentistryPage  6 
+
+--- PAGE 7 ---
+ 
+4.  PARENTS  &  CAREGIVERS  
+This  section  should  be  particularly  user-friendly  and  written  in  accessible  language.  
+Your  Child's  Smile  Starts  Early  
+Children's  dental  care  begins  long  before  the  first  permanent  teeth  appear.  
+Healthy  baby  teeth  are  important  for  eating,  speaking,  development  and  maintaining  space  for  permanent  
+teeth.
+ 
+Establishing
+ 
+good
+ 
+oral-health
+ 
+habits
+ 
+early
+ 
+can
+ 
+also
+ 
+help
+ 
+children
+ 
+develop
+ 
+a
+ 
+positive
+ 
+attitude
+ 
+towards
+ 
+dental
+ 
+care.
+ 
+Suggested  Topics  
+•
+ When  should  my  child  first  see  a  dentist?  
+•
+ Baby  teeth  matter  
+•
+ Toothbrushing  
+•
+ Fluoride  and  toothpaste  
+•
+ Diet  and  children's  teeth  
+•
+ Preventing  tooth  decay  
+•
+ Dental  anxiety  
+•
+ Dental  emergencies  
+•
+ Children's  dental  development  
+•
+ Dental  injuries  
+•
+ Special  care  needs  
+•
+ Frequently  asked  questions  
+These  can  initially  be  presented  as  article  cards  and  expanded  as  content  is  developed.  
+5.  FOR  DENTAL  PROFESSIONALS  
+Supporting  Professionals  in  the  Care  of  Children  
+Paediatric  dentistry  requires  knowledge  of  children's  developing  dentition,  growth,  behaviour  and  individual  
+needs.
+ 
+ZAPD  aims  to  provide  a  professional  community  where  dental  practitioners  can  continue  learning,  exchange  
+experiences
+ 
+and
+ 
+develop
+ 
+their
+ 
+confidence
+ 
+in
+ 
+caring
+ 
+for
+ 
+children.
+ 
+Sections:  
+•
+ Professional  Resources  
+•
+ Continuing  Professional  Development  
+•
+ Clinical  Education  
+•
+ Upcoming  Courses  
+Zimbabwe  Association  of  Paediatric  DentistryPage  7 
+
+--- PAGE 8 ---
+ 
+•
+ Webinars  
+•
+ Conferences  
+•
+ Professional  Discussions/Updates  
+This  section  should  be  designed  so  that  resources  can  be  added  over  time.  
+6.  MEMBERSHIP  
+Become  Part  of  ZAPD  
+Membership  of  the  Zimbabwe  Association  of  Paediatric  Dentistry  provides  an  opportunity  to  connect  with  
+colleagues
+ 
+who
+ 
+share
+ 
+an
+ 
+interest
+ 
+in
+ 
+children's
+ 
+oral
+ 
+health.
+ 
+Whether  you  are  involved  extensively  in  paediatric  dentistry  or  simply  have  a  strong  interest  in  improving  
+the
+ 
+dental
+ 
+care
+ 
+of
+ 
+children,
+ 
+ZAPD
+ 
+provides
+ 
+a
+ 
+platform
+ 
+for
+ 
+learning,
+ 
+collaboration
+ 
+and
+ 
+professional
+ 
+engagement.
+ 
+Proposed  Membership  Categories  
+1.  Paediatric  Dentist  Member For  dentists  with  recognised  postgraduate  training/qualification  in  paediatric  dentistry.  
+2.  Dentist  Member For  registered  dentists  with  an  interest  in  paediatric  dentistry  and  children's  oral  health.  
+3.  Trainee/Registrar  Member For  dentists  undertaking  recognised  postgraduate  training  in  paediatric  dentistry.  
+4.  Student  Member For  undergraduate  dental  students.  
+5.  Allied  Oral  Health  Professional  Member For  appropriately  registered  dental  therapists,  oral  health  therapists,  oral  hygienists  and  other  relevant  
+oral-health
+ 
+professionals.
+ 
+6.  Retired/Emeritus  Member For  retired  members  or  suitably  recognised  senior  members  of  the  profession.  
+7.  International/Affiliate  Member For  professionals  outside  Zimbabwe  who  have  an  interest  in  paediatric  dentistry  or  a  professional  
+relationship
+ 
+with
+ 
+ZAPD.
+ 
+8.  Honorary  Member For  individuals  recognised  by  ZAPD  for  an  outstanding  contribution  to  children's  oral  health  or  to  the  
+Association.
+ 
+The  final  eligibility  requirements,  voting  rights  and  membership  fees  will  be  confirmed  by  the  Association  
+and
+ 
+incorporated
+ 
+into
+ 
+the
+ 
+membership
+ 
+application
+ 
+system.
+ 
+Zimbabwe  Association  of  Paediatric  DentistryPage  8 
+
+--- PAGE 9 ---
+ 
+Membership  Benefits  
+•
+ Professional  networking  
+•
+ Educational  activities  
+•
+ Conferences,  workshops  and  webinars  
+•
+ CPD  opportunities  
+•
+ Professional  and  clinical  discussions  
+•
+ Paediatric  dentistry  resources  
+•
+ Association  news  and  updates  
+•
+ Opportunities  to  participate  in  ZAPD  initiatives  
+Include  a  prominent:  
+JOIN  ZAPD  button. 
+7.  EVENTS  
+ZAPD  Events  
+A  dedicated  events  calendar  should  allow  visitors  to  view  upcoming:  
+•
+ Conferences  
+•
+ Courses  
+•
+ Workshops  
+•
+ Webinars  
+•
+ CPD  activities  
+•
+ Professional  meetings  
+•
+ Association  events  
+Each  event  should  be  able  to  include:  
+•
+ Event  title  
+•
+ Date  
+•
+ Time  
+•
+ Venue/online  
+•
+ Speaker(s)  
+•
+ Programme  
+•
+ Registration  information  
+•
+ CPD  information  
+•
+ Registration/payment  link  where  applicable  
+The  system  should  allow  past  events  to  remain  archived.  
+Zimbabwe  Association  of  Paediatric  DentistryPage  9 
+
+--- PAGE 10 ---
+ 
+8.  BLOG  &  NEWS  
+The  ZAPD  Journal  
+This  section  will  contain  educational  and  professional  content.  
+Suggested  categories:  
+For  Parents Accessible  information  about  children's  oral  health.  
+For  Professionals Clinical  updates,  educational  articles  and  professional  perspectives.  
+Association  News ZAPD  announcements,  initiatives,  membership  news  and  activities.  
+Community  &  Oral  Health Information  about  activities  and  initiatives  aimed  at  improving  children's  oral  health  in  Zimbabwe.  
+The  blog  should  allow  photographs,  categories,  dates  and  author  information.  
+9.  FIND  A  PAEDIATRIC  DENTIST  
+Finding  the  Right  Dental  Care  for  Your  Child  
+The  website  should  include  a  searchable  ZAPD  Member  Directory.  
+Visitors  should  ideally  be  able  to  search  by:  
+•
+ Name  
+•
+ City  
+•
+ Practice  
+•
+ Location  
+Individual  profiles  could  include:  
+•
+ Dentist's  name  
+•
+ Professional  designation  
+•
+ Practice  name  
+•
+ City/location  
+•
+ Contact  details  
+•
+ Practice  website/social  media  where  appropriate  
+Directory  information  should  be  displayed  according  to  ZAPD's  membership  and  listing  policies.  
+Zimbabwe  Association  of  Paediatric  DentistryPage  10 
+
+--- PAGE 11 ---
+ 
+10.  CONTACT  US  
+Get  in  Touch  
+We  would  be  pleased  to  hear  from  you.  
+Whether  you  are  a  parent  seeking  information  about  children's  oral  health,  a  dental  professional  interested  
+in
+ 
+membership,
+ 
+or
+ 
+an
+ 
+organisation
+ 
+interested
+ 
+in
+ 
+collaborating
+ 
+with
+ 
+ZAPD,
+ 
+please
+ 
+contact
+ 
+us.
+ 
+Include:  
+Email:  [To  be  provided]  
+Telephone:  [To  be  provided]  
+Address:  [To  be  provided]  
+Contact  Form  
+•
+ Name  
+•
+ Email  
+•
+ Telephone  
+•
+ Enquiry  type  
+•
+ Message  
+Button: 
+Send  Enquiry 
+Also  include  links  to  ZAPD's  social  media  platforms  once  these  accounts  have  been  established.  
+11.  FOOTER  
+Zimbabwe  Association  of  Paediatric  Dentistry  
+Promoting  healthy  smiles  and  positive  dental  experiences  for  Zimbabwe's  children.  
+Quick  links: 
+About  |  Parents  &  Caregivers  |  Dental  Professionals  |  Membership  |  Events  |  Blog  |  Find  a  
+Paediatric
+ 
+Dentist
+ 
+|
+ 
+Contact 
+Include:  
+•
+ Privacy  Policy  
+•
+ Terms  of  Use  
+•
+ Copyright  
+Zimbabwe  Association  of  Paediatric  DentistryPage  11 
+
+--- PAGE 12 ---
+ 
+12.  DESIGN  DIRECTION  
+The  website  should  feel:  
+•
+ Professional  
+•
+ Modern  
+•
+ Warm  
+•
+ Child-friendly  without  looking  childish  
+•
+ Trustworthy  
+•
+ Clean  and  uncluttered  
+•
+ Appropriate  for  a  national  professional  dental  association  
+We  would  like  to  avoid  an  overly  cartoon-like  children's  website.  The  target  audience  includes  both  
+healthcare
+ 
+professionals
+ 
+and
+ 
+parents,
+ 
+so
+ 
+the
+ 
+design
+ 
+should
+ 
+balance
+ 
+warmth
+ 
+with
+ 
+professionalism.
+ 
+Photography  should  preferably  feature  real  children,  families  and  dental  professionals,  where  appropriate  
+and
+ 
+with
+ 
+the
+ 
+necessary
+ 
+permissions.
+ 
+The  colour  palette  should  complement  the  ZAPD  logo/branding  once  finalised.  
+The  website  should  be:  
+•
+ Fully  responsive  on  mobile,  tablet  and  desktop  
+•
+ Easy  to  navigate  
+•
+ Easy  for  the  Association  to  update  
+•
+ Search-engine  friendly  
+•
+ Secure  
+•
+ Fast-loading  
+•
+ Accessible  
+•
+ Capable  of  adding  new  events,  articles  and  resources  over  time  
+13.  FEATURES  WE  WOULD  LIKE  TO  BUILD  IN  
+Where  practical,  the  website  should  allow  for:  
+•
+ Online  membership  applications  
+•
+ Membership  directory  
+•
+ Online  event  registration  
+•
+ CPD/event  registration  
+•
+ Blog/news  management  
+•
+ Contact  forms  
+•
+ Newsletter/email  subscription  
+•
+ Social  media  integration  
+Zimbabwe  Association  of  Paediatric  DentistryPage  12 
+
+--- PAGE 13 ---
+ 
+•
+ Downloadable  documents/resources  
+•
+ Search  functionality  
+•
+ Event  archive  
+•
+ Member-only  resources  in  the  future  
+The  website  should  be  built  with  the  ability  to  expand  as  ZAPD  develops.  
+14.  CONTENT  WE  ARE  DELIBERATELY  NOT  INCLUDING  
+The  ZAPD  website  should  not  position  the  Association  around:  
+•
+ Advocacy  for  paediatric  dentistry  to  become  a  separate  recognised  speciality  
+•
+ Medical  aid/health  insurance  inclusion  advocacy  
+•
+ Industry  advocacy  
+These  are  not  part  of  the  current  positioning  of  the  Association.  
+The  focus  should  instead  remain  on:  
+Children's  Oral  Health  |  Prevention  |  Education  |  Professional  Development  |  Collaboration  |  
+Quality
+ 
+Paediatric
+ 
+Dental
+ 
+Care 
+15.  OVERALL  BRAND  MESSAGE  
+The  overall  impression  we  would  like  visitors  to  take  away  is:  
+ZAPD  is  a  professional,  credible  and  collaborative  organisation  working  to  improve  the  oral  health  
+of
+ 
+children
+ 
+in
+ 
+Zimbabwe. 
+The  website  should  therefore  speak  confidently  to  dental  professionals  while  remaining  welcoming  and  
+accessible
+ 
+to
+ 
+parents
+ 
+and
+ 
+caregivers.
+ 
+Please  use  the  above  as  the  initial  website  content  and  development  brief.  Some  details—particularly  
+committee
+ 
+information,
+ 
+membership
+ 
+fees,
+ 
+contact
+ 
+details,
+ 
+social
+ 
+media
+ 
+links
+ 
+and
+ 
+final
+ 
+branding—will
+ 
+be
+ 
+supplied
+ 
+separately
+ 
+as
+ 
+they
+ 
+are
+ 
+confirmed.
+ 
+Zimbabwe  Association  of  Paediatric  DentistryPage  13 

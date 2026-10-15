@@ -10,11 +10,9 @@ export const images = {
   drMadziwa: image("dr-rumbidzo-madziwa-manana.jpg"),
   drNyoni: image("dr-nyoni-updated.jpeg"),
   drChingwena: image("dr-chingwena.png"),
-  childBrushing: image("child-brushing.jpeg"),
-  childDentistParent: image("child-dentist-parent.jpg"),
   dentalToolsPink: image("dental-tools-pink.jpg"),
   happyChild: image("happy-child.jpeg"),
-  oralHealthEducation: image("oral-health-education.jpeg"),
+  joinZapdChild: image("join-zapd-pointing-child.jpg"),
   childrenTogether: image("children-together.jpg"),
   aboutZapd: image("client-who-we-are.jpg"),
   healthySmiles: image("client-healthy-smiles.jpg"),
@@ -26,6 +24,7 @@ export const images = {
 }
 
 export const heroArtwork: Record<string, string> = {
+  "/blog": image("hero-blog.svg"),
   "/about": image("hero-about.svg"),
   "/parents": image("hero-parents.svg"),
   "/membership": image("hero-membership.svg"),

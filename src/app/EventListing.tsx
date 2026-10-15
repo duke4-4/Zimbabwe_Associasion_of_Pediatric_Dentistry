@@ -66,8 +66,8 @@ export default function EventListing({
             </h3>
             <p className="mt-3 leading-7 text-[#5c7889]">
               {archive
-                ? "Previous ZAPD events will remain available here as the calendar grows."
-                : "Conferences, courses, workshops, webinars, CPD activities, professional meetings and association events."}
+                ? "Details of completed events will be listed here."
+                : "Conferences, courses, workshops, webinars and other ZAPD activities."}
             </p>
           </div>
         )}

@@ -14,11 +14,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 ::selection { background: #ffed00; color: #064b7b; }
 .font-display { font-family: "Inter", sans-serif; font-weight: 700; }
-.eyebrow { color: #bc2027; font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.eyebrow { color: #bc2027; font-size: .8125rem; font-weight: 700; letter-spacing: .03em; }
 .section-title { max-width: 42rem; color: #064b7b; font-family: "Inter", sans-serif; font-size: clamp(2rem, 3.8vw, 3.5rem); font-weight: 700; line-height: 1.12; letter-spacing: -.035em; }
-.primary-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: .75rem; border-radius: 9999px; background: #064b7b; padding: .875rem 1.5rem; color: white; font-size: .9375rem; font-weight: 700; transition: background 160ms; }
+.primary-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: .75rem; border-radius: .75rem; background: #064b7b; padding: .875rem 1.5rem; color: white; font-size: .9375rem; font-weight: 700; transition: background 160ms; }
 .primary-button:hover { background: #033757; }
-.secondary-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; border: 1px solid rgb(6 75 123 / .25); border-radius: 9999px; background: transparent; padding: .875rem 1.5rem; color: #064b7b; font-size: .9375rem; font-weight: 700; transition: background 160ms, border-color 160ms; }
+.secondary-button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; border: 1px solid rgb(6 75 123 / .25); border-radius: .75rem; background: transparent; padding: .875rem 1.5rem; color: #064b7b; font-size: .9375rem; font-weight: 700; transition: background 160ms, border-color 160ms; }
 .secondary-button:hover { border-color: rgb(0 115 63 / .45); background: rgb(0 115 63 / .06); }
 .form-label { display: block; color: #315d79; font-size: .875rem; font-weight: 700; }
 .form-input { margin-top: .5rem; min-width: 0; width: 100%; border: 1px solid rgb(6 75 123 / .16); border-radius: .75rem; background: #e6e9e8; padding: .9rem 1rem; color: #123f60; font-size: 1rem; font-weight: 500; outline: none; transition: border-color 160ms, box-shadow 160ms; }
@@ -56,7 +56,7 @@ button:disabled { cursor: wait; }
 textarea.form-input { min-height: 9rem; }
 .hero-artwork { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 .hero-artwork-image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.hero-artwork-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(4 24 38 / .94) 0%, rgb(4 24 38 / .86) 38%, rgb(4 24 38 / .62) 72%, rgb(4 24 38 / .5) 100%); }
+.hero-artwork-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(6 47 74 / .9), rgb(6 47 74 / .65) 55%, rgb(6 47 74 / .2)); }
 .art-hero .hero-copy :is(h1, h2, p, strong) { color: #fff; }
 .art-hero .hero-copy .eyebrow, .art-hero .hero-copy h1 span { color: #ffed00; }
 .art-hero .primary-button { background: #ffed00; color: #062f4a; }
@@ -69,23 +69,19 @@ textarea.form-input { min-height: 9rem; }
 .home-hero .hero-copy > p:not(.eyebrow) { color: #d5e0e5; }
 .home-hero .hero-copy .eyebrow { color: #d5e0e5; letter-spacing: .1em; }
 @media (max-width: 767px) {
-  .hero-artwork-image { object-position: 65% center; }
-  .hero-artwork-overlay { background: rgb(4 24 38 / .83); }
+  .hero-artwork-overlay { background: rgb(6 47 74 / .78); }
 }
-.about-feature { position: relative; isolation: isolate; width: calc(100% - 2.5rem); max-width: 80rem; margin: 4rem auto; overflow: hidden; border: 1px solid rgb(6 75 123 / .2); border-radius: 2rem; background: #062f4a; color: white; }
-.about-feature-image { display: block; width: 100%; height: 300px; object-fit: cover; object-position: center 30%; }
-.about-feature-shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, transparent 240px, #062f4a 300px); }
-.about-feature-copy { position: relative; padding: 1.5rem 1.5rem 2.5rem; }
+.about-feature { display: grid; position: relative; isolation: isolate; width: calc(100% - 2.5rem); max-width: 80rem; margin: 4rem auto; overflow: hidden; border: 1px solid rgb(6 75 123 / .2); border-radius: 1.25rem; background: #062f4a; color: white; }
+.about-feature-image { display: block; width: 100%; height: 340px; object-fit: cover; object-position: center; background: #dce2e1; }
+.about-feature-copy { padding: 2rem; }
 @media (min-width: 640px) {
-  .about-feature-image { height: 420px; }
-  .about-feature-shade { background: linear-gradient(to bottom, transparent 350px, #062f4a 420px); }
-  .about-feature-copy { padding: 2rem 3rem 3rem; }
+  .about-feature-image { height: 440px; }
+  .about-feature-copy { padding: 3rem; }
 }
 @media (min-width: 1024px) {
-  .about-feature { min-height: 500px; display: flex; align-items: center; }
-  .about-feature-image { position: absolute; inset: 0 0 0 auto; width: 62%; height: 100%; object-position: center; }
-  .about-feature-shade { background: linear-gradient(90deg, #062f4a 0%, #062f4a 24%, rgb(6 47 74 / .96) 33%, rgb(6 47 74 / .65) 44%, transparent 65%); }
-  .about-feature-copy { width: 48%; padding: 3.5rem; }
+  .about-feature { min-height: 500px; grid-template-columns: 1.05fr 1fr; align-items: stretch; }
+  .about-feature-image { grid-column: 2; grid-row: 1; height: 100%; min-height: 500px; max-height: 540px; }
+  .about-feature-copy { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 3.5rem; }
 }
 @media (max-width: 639px) {
   main > section, main > section > .max-w-7xl { padding-top: 3.5rem; padding-bottom: 3.5rem; }
@@ -94,21 +90,56 @@ textarea.form-input { min-height: 9rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
 
-/* Artwork has its own full-width band below the content, never behind text. */
+/* Small, irregularly spaced dental illustrations stay in the outer margins and padding. */
 .content-card { border: 1px solid rgb(6 75 123 / .18); }
-.dental-accent { background: #e6e9e8; }
-.dental-accent::after { content: ""; display: block; width: 100%; height: 10rem; pointer-events: none; background: url("/images/dental-band.svg") center / 1200px 180px repeat-x; opacity: .65; }
-.dental-accent-tools { background-color: #dce2e1; }
-.dental-accent-tools::after { background-position: calc(50% + 160px) center; }
-.section-mist { background-color: #dce2e1; border: 0; border-radius: 0; }
-.oral-health-section { border: 0; border-radius: 0; }
-.contact-band { position: relative; isolation: isolate; overflow: hidden; background: #dce2e1; }
-.contact-band-image { position: absolute; inset: 0 0 0 auto; height: 100%; width: 45%; object-fit: contain; object-position: right top; }
-.contact-band-shade { position: absolute; inset: 0; background: linear-gradient(90deg, #dce2e1 35%, rgb(220 226 225 / .94) 45%, transparent 75%); }
+.dental-accent { position: relative; isolation: isolate; background: #e6e9e8; }
+.dental-accent > :not(.dental-scatter) { position: relative; z-index: 1; }
+.dental-scatter { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.dental-decoration { position: absolute; width: 26px; height: 36px; opacity: .5; }
+.dental-decoration-1 { left: 18%; top: 12px; transform: rotate(-18deg); }
+.dental-decoration-2 { right: 8%; top: 18px; width: 20px; transform: rotate(24deg); }
+.dental-decoration-3 { left: max(3px, calc((100% - 80rem) / 4)); top: 32%; width: 20px; transform: rotate(-12deg); }
+.dental-decoration-4 { right: max(3px, calc((100% - 80rem) / 4)); top: 56%; transform: rotate(15deg); }
+.dental-decoration-5 { left: max(3px, calc((100% - 80rem) / 4)); bottom: 18%; width: 22px; transform: rotate(26deg); }
+.dental-decoration-6 { right: 34%; bottom: 12px; width: 20px; transform: rotate(-25deg); }
+.dental-decoration-7 { left: 38%; bottom: 18px; width: 23px; transform: rotate(12deg); }
+.dental-decoration-8 { right: max(3px, calc((100% - 80rem) / 4)); top: 18%; width: 18px; transform: rotate(-15deg); }
+.dental-accent:nth-of-type(even) .dental-decoration-1 { left: 35%; transform: rotate(21deg); }
+.dental-accent:nth-of-type(even) .dental-decoration-2 { right: 22%; }
+.dental-accent:nth-of-type(even) .dental-decoration-7 { left: 19%; }
+.dental-accent-tools, .section-mist { background-color: #dce2e1; }
+.section-mist, .oral-health-section { border: 0; border-radius: 0; }
+.home-contact { background: #d5dddc; }
+.home-contact-layout { display: grid; gap: 2.5rem; align-items: center; }
+.home-contact-image { width: 100%; max-width: 25rem; aspect-ratio: 4 / 5; justify-self: center; border-radius: 1rem; }
+.contact-photo-frame { overflow: hidden; }
+.contact-photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.12); transform-origin: center top; }
+.home-contact-copy { min-width: 0; }
+.home-contact-details { margin-top: 2rem; border-top: 1px solid rgb(6 75 123 / .2); }
+.home-contact-link { display: grid; grid-template-columns: 1.25rem 1fr 1.25rem; align-items: center; gap: 1rem; padding: 1.15rem 0; border-bottom: 1px solid rgb(6 75 123 / .2); color: #064b7b; font-weight: 600; }
+.home-contact-link:hover { color: #00733f; }
+.home-contact-label { display: block; margin-bottom: .3rem; font-size: .8rem; font-weight: 400; color: #4d6e82; }
+.objectives-section { background: #dce2e1; }
+.objectives-layout { display: grid; gap: 2.5rem; }
+.objectives-photo { margin-top: 2rem; }
+.objectives-photo img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: contain; border-radius: 1rem; }
+.objectives-photo figcaption { margin-top: .75rem; font-size: .875rem; line-height: 1.6; color: #4d6e82; }
+.objectives-values { margin-top: 2rem; }
+.objectives-values ul { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; margin-top: 1rem; color: #315d79; font-size: .9375rem; }
+.objectives-list { align-self: center; border-top: 1px solid rgb(6 75 123 / .2); }
+.objectives-list li { padding: 1.15rem 0; border-bottom: 1px solid rgb(6 75 123 / .2); color: #315d79; font-size: 1.0625rem; line-height: 1.7; }
+@media (min-width: 768px) {
+  .home-contact-layout { grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 6rem); }
+}
+@media (min-width: 1024px) {
+  .objectives-layout { grid-template-columns: 1fr 1.1fr; gap: 4.5rem; align-items: start; }
+}
+@media (max-width: 1023px) {
+  .dental-decoration { width: 16px; height: 24px; opacity: .4; }
+  .dental-decoration-3, .dental-decoration-4, .dental-decoration-5, .dental-decoration-8 { width: 14px; }
+}
 @media (max-width: 767px) {
-  .dental-accent::after { height: 8rem; background-size: 960px 144px; }
-  .contact-band-image { position: static; width: 100%; height: auto; max-height: 28rem; object-fit: contain; object-position: center top; }
-  .contact-band-shade { display: none; }
+  .home-contact-image { max-width: 22rem; }
 }
 
 .parent-intro { display: grid; gap: 2rem; align-items: center; margin-bottom: 3rem; }
