@@ -8,7 +8,7 @@ Later user instructions take precedence:
 
 - Use the shorter home hero introduction: “ZAPD brings dental professionals together to promote children’s oral health and wellbeing in Zimbabwe through education, professional development and collaboration.” Keep “One Smile at a Time” in red italics.
 - Use the latest supplied committee names and positions and the updated contact number.
-- Keep the journal removed and leave Resources ready for future content.
+- Keep the journal removed. Use "Blog and news" as the blog page heading, with an introduction covering parent and professional articles, ZAPD announcements, and community oral-health initiatives. Leave the page ready for future content.
 - Retain the requested parent-question dialogs and their sourced suggested answers. Those answers supplement the brief, which lists topics without supplying answers.
 - Keep practical form instructions, validation messages and navigation labels where the brief does not specify wording.
 

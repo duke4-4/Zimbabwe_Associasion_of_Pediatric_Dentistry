@@ -17,6 +17,6 @@ Complementary stock photographs:
 
 - `children-together.jpg`: C?Pho Ngondo R.Rouge, [smiling children](https://www.pexels.com/photo/joyful-portrait-of-smiling-african-children-11276483/), Pexels license.
 - `smiling-boy.jpg`: Adera Abdoulaye Dolo, [smiling boy outdoors](https://www.pexels.com/photo/a-cute-little-boy-smiling-15538193/), Pexels license.
-- `join-zapd-pointing-child.jpg`: Jessica Pope, [child pointing against a yellow background](https://www.pexels.com/photo/kid-pointing-his-finger-13198541/), free under the Pexels license. Downloaded at 1600 x 2286 pixels for the About page's Join ZAPD section; displayed mirrored with CSS so the child points to the viewer's right.
+- `join-zapd-smiling-girl.jpg`: RDNE Stock project, [smiling girl against a turquoise background](https://www.pexels.com/photo/close-up-shot-of-a-girl-8363085/), free under the Pexels license. Downloaded at 2400 x 1600 pixels for the About page's Join ZAPD section.
 
 Stock photographs are illustrative and do not identify ZAPD members or actual ZAPD events. The original source notes are retained alongside this document for reference.

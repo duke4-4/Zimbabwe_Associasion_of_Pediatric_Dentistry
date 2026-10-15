@@ -12,7 +12,7 @@ export const images = {
   drChingwena: image("dr-chingwena.png"),
   dentalToolsPink: image("dental-tools-pink.jpg"),
   happyChild: image("happy-child.jpeg"),
-  joinZapdChild: image("join-zapd-pointing-child.jpg"),
+  joinZapdChild: image("join-zapd-smiling-girl.jpg"),
   childrenTogether: image("children-together.jpg"),
   aboutZapd: image("client-who-we-are.jpg"),
   healthySmiles: image("client-healthy-smiles.jpg"),

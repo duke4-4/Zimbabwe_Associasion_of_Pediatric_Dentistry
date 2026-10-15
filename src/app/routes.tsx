@@ -963,10 +963,10 @@ function About() {
           </div>
           <img
             src={joinZapdChild}
-            alt="A cheerful child wearing sunglasses and a backpack, pointing right against a yellow background"
+            alt="A smiling young girl in a floral blue shirt against a turquoise background"
             loading="lazy"
             decoding="async"
-            className="aspect-square w-full self-center -scale-x-100 object-cover object-center"
+            className="aspect-square w-full self-center object-cover object-[20%_center]"
           />
         </div>
       </section>
