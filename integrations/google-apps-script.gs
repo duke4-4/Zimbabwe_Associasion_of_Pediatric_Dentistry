@@ -1,6 +1,7 @@
 const SPREADSHEET_ID = "1k5uLm1px4kB_HmfFiON75EYFc0pWkr1HyyKwcdSk7K4";
 // Matches gid=0 in the supplied spreadsheet URL, even if the tab is renamed.
 const SHEET_ID = 0;
+const MEMBERSHIP_EMAIL = "info@zapd.org.zw";
 
 function doPost(event) {
   const lock = LockService.getScriptLock();
@@ -43,8 +44,9 @@ function doPost(event) {
       sheet.appendRow(headers);
     }
 
+    const submittedAt = new Date().toISOString();
     sheet.appendRow([
-      new Date().toISOString(),
+      submittedAt,
       safeCell(application.firstName),
       safeCell(application.lastName),
       safeCell(application.email),
@@ -57,8 +59,24 @@ function doPost(event) {
       "Yes",
     ]);
 
+    // A mail failure must not turn a saved application into a failed submission.
+    let emailSent = false;
+    try {
+      sendMembershipNotification(application, submittedAt);
+      emailSent = true;
+    } catch (error) {
+      console.error("Membership email failed; application remains saved. Check mail permissions and quota.");
+    }
+    try {
+      sheet.getRange(sheet.getLastRow(), 1).setNote(emailSent
+        ? "Membership notification sent to " + MEMBERSHIP_EMAIL
+        : "Email notification failed. Application saved; contact this applicant manually.");
+    } catch (error) {
+      console.error("Could not record membership email status.");
+    }
+
     return ContentService
-      .createTextOutput(JSON.stringify({ ok: true }))
+      .createTextOutput(JSON.stringify({ ok: true, emailSent }))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
     return ContentService
@@ -67,6 +85,41 @@ function doPost(event) {
   } finally {
     if (acquired) lock.releaseLock();
   }
+}
+
+function sendMembershipNotification(application, submittedAt) {
+  const fields = [
+    ["First name", "firstName"],
+    ["Last name", "lastName"],
+    ["Email", "email"],
+    ["Phone", "phone"],
+    ["Registration number", "registrationNumber"],
+    ["Practice or institution", "practice"],
+    ["City", "city"],
+    ["Membership category", "category"],
+    ["Motivation", "motivation"],
+  ];
+  MailApp.sendEmail({
+    to: MEMBERSHIP_EMAIL,
+    subject: "New ZAPD membership application",
+    name: "ZAPD Membership",
+    replyTo: application.email.trim(),
+    body: [
+      "A new membership application has been saved.",
+      "Submitted at (UTC): " + submittedAt,
+      "",
+      ...fields.map(([label, field]) => label + ": " + (String(application[field] || "").trim().slice(0, 3000) || "Not provided")),
+      "Consent: Yes",
+      "",
+      "Review applications: https://docs.google.com/spreadsheets/d/" + SPREADSHEET_ID + "/edit#gid=" + SHEET_ID,
+      "This is an application, not confirmation of membership approval.",
+    ].join("\n"),
+  });
+}
+
+// Run once from the editor to grant email permission without sending a message.
+function authoriseMembershipEmail() {
+  return MailApp.getRemainingDailyQuota();
 }
 
 // Keep user-entered values as text, including phone numbers and formula-like text.

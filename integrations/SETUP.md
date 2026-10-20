@@ -18,7 +18,9 @@ The script now targets your spreadsheet, tab `gid=0`. Live activation still requ
 5. Click **Deploy** and copy the web-app URL ending in `/exec`. Do not use the spreadsheet URL or the `/dev` test URL.
 6. Open `/exec` in a private browser window. It should show `{"ok":true,"service":"ZAPD membership"}`. This checks access without adding a row.
 
-For an existing deployment, use **Deploy > Manage deployments > Edit > New version > Deploy** after replacing the code. Saving alone does not update the deployed script.
+Before deploying, select `authoriseMembershipEmail` in the Apps Script editor and click **Run**. Approve the email-sending permission. This authorisation check does not send an email.
+
+For an existing deployment, use **Deploy > Manage deployments > Edit > New version > Deploy** after replacing the code and granting email permission. Saving alone does not update the deployed script.
 
 ## 3. Connect Vercel
 
@@ -32,10 +34,15 @@ This variable is server-side; do not use a `VITE_` prefix. The website posts to 
 ## 4. Verify
 
 1. Open `/join` on the deployed website and submit one clearly labelled test application using an email address you control.
-2. Confirm both a success message and a matching row in the spreadsheet tab.
+2. Confirm a success message, a matching row in the spreadsheet tab, and a notification at **info@zapd.org.zw** containing all application details. Check spam as well. Replying to the notification addresses the applicant.
 3. If a request times out, check the sheet before resubmitting to avoid duplicates.
 4. Remove the test row if desired.
 
-Timestamps are UTC. Submissions are applications, not automatic membership approval. The integration does not send email. Use [MEMBERSHIP-EMAIL.md](MEMBERSHIP-EMAIL.md) as the draft for your mailbox's automatic response.
+Timestamps are UTC. Submissions are applications, not automatic membership approval. Each saved application triggers a notification to **info@zapd.org.zw**, sent by the Google account deploying the script. No notification is sent for an invalid or unsaved application.
+
+If sending fails (for example due to permissions or Google's daily quota), the application stays saved and the form still confirms receipt. The timestamp cell's note records notification success or failure; check Apps Script executions for errors and follow up manually on failed notifications. There is no automatic email retry.
+
+This notification is separate from the mailbox automatic response in [MEMBERSHIP-EMAIL.md](MEMBERSHIP-EMAIL.md).
 
 Reference: [Google Apps Script web-app deployment](https://developers.google.com/apps-script/guides/web).
+Email service: [Google MailApp](https://developers.google.com/apps-script/reference/mail/mail-app).
