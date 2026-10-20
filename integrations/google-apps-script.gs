@@ -1,5 +1,6 @@
-const SPREADSHEET_ID = "1QlOgqqNny1Pln1SoN1UOjSqot3oT2nuaq11I0mQBB8g";
-const SHEET_NAME = "Sheet1";
+const SPREADSHEET_ID = "1k5uLm1px4kB_HmfFiON75EYFc0pWkr1HyyKwcdSk7K4";
+// Matches gid=0 in the supplied spreadsheet URL, even if the tab is renamed.
+const SHEET_ID = 0;
 
 function doPost(event) {
   const lock = LockService.getScriptLock();
@@ -9,9 +10,9 @@ function doPost(event) {
     lock.waitLock(10000);
     acquired = true;
 
-    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
+    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetById(SHEET_ID);
     if (!sheet) {
-      throw new Error(`Sheet "${SHEET_NAME}" was not found.`);
+      throw new Error(`Sheet with gid=${SHEET_ID} was not found.`);
     }
 
     const application = JSON.parse(event.postData.contents);
@@ -77,7 +78,7 @@ function safeCell(value) {
 // Check deployment and sheet access without adding a test application.
 function doGet() {
   try {
-    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
+    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetById(SHEET_ID);
     if (!sheet) throw new Error("Membership sheet not found.");
     return ContentService.createTextOutput(JSON.stringify({ ok: true, service: "ZAPD membership" })).setMimeType(ContentService.MimeType.JSON);
   } catch (error) {

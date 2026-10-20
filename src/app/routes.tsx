@@ -29,7 +29,6 @@ const {
   drMadziwa,
   drNyoni,
   drChingwena,
-  dentalToolsPink,
   happyChild,
   joinZapdChild,
   childrenTogether,
@@ -490,7 +489,7 @@ function Home() {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-[#dde3e3]">
+      <section className="home-hero relative isolate overflow-hidden bg-[#dde3e3]">
         <div className="mx-auto grid lg:min-h-[720px] max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:py-20">
           <div className="relative z-10 max-w-2xl">
             <p className="eyebrow mb-5">Zimbabwe Association of Paediatric Dentistry</p>
@@ -656,10 +655,27 @@ function Home() {
           <img
             decoding="async"
             loading="lazy"
-            src={dentalVisit}
-            alt="A dentist caring for a child seated with a parent"
+            src={joinZapdChild}
+            alt="Three children smiling together"
             className="aspect-[3/2] w-full self-center object-contain"
           />
+        </div>
+      </section>
+
+      <section className="bg-[#eef0ef]" aria-labelledby="iapd-heading">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-16 lg:grid-cols-[1fr_auto] lg:px-8">
+          <div>
+            <p className="eyebrow">Our international affiliation</p>
+            <h2 id="iapd-heading" className="section-title mt-4">Connected through IAPD</h2>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5c7889]">
+              ZAPD is affiliated with the International Association of Paediatric Dentistry (IAPD),
+              a global community dedicated to children's oral health. Explore international
+              education, resources and events for paediatric dental professionals.
+            </p>
+          </div>
+          <a href="https://iapdworld.org/" target="_blank" rel="noopener noreferrer" className="primary-button">
+            Visit IAPD <span className="sr-only">(opens in a new tab)</span><Icon name="arrow" />
+          </a>
         </div>
       </section>
 
@@ -963,10 +979,10 @@ function About() {
           </div>
           <img
             src={joinZapdChild}
-            alt="A smiling young girl in a floral blue shirt against a turquoise background"
+            alt="Three children smiling together"
             loading="lazy"
             decoding="async"
-            className="aspect-square w-full self-center object-cover object-[20%_center]"
+            className="aspect-[3/2] w-full self-center object-cover object-center"
           />
         </div>
       </section>
@@ -1210,8 +1226,8 @@ function Membership() {
           <img
             decoding="async"
             loading="lazy"
-            src={dentalToolsPink}
-            alt="Tooth models, a dental teaching model and care tools on a pastel pink background"
+            src={joinZapdChild}
+            alt="Three children smiling together"
             className="aspect-[5/4] w-full object-cover object-center"
           />
           <figcaption className="flex flex-wrap items-baseline justify-between gap-3   px-6 py-5">
@@ -1324,12 +1340,12 @@ function Membership() {
 }
 
 const members = [
-  { name: "Dr Advance Chingwena", image: drChingwena, email: "info@zapd.org.zw", role: "President" },
-  { name: "Dr RL Madziwa-Manana", image: drMadziwa, email: "info@zapd.org.zw", role: "President Elect" },
-  { name: "Dr S Bhaskar", image: drSheetal, email: "info@zapd.org.zw", role: "Secretary" },
+  { name: "Dr A Chingwena", image: drChingwena, email: "info@zapd.org.zw", role: "President" },
+  { name: "Dr Madziwa", image: drMadziwa, email: "info@zapd.org.zw", role: "CPD & Education Delegate" },
+  { name: "Dr Sheetal Bhaskar", image: drSheetal, email: "info@zapd.org.zw", role: "President Elect / Secretary" },
   { name: "Dr C Viki", image: drViki, email: "info@zapd.org.zw", role: "Treasurer" },
   { name: "Dr C Farirayi", image: drChipo, email: "info@zapd.org.zw", role: "CPD & Education Delegate" },
-  { name: "Dr R Nyoni", image: drNyoni, email: "info@zapd.org.zw", role: "Board Member", imageClass: "object-cover object-[center_22%]" },
+  { name: "Dr Nyoni", image: drNyoni, email: "info@zapd.org.zw", role: "CPD & Education Delegate", imageClass: "object-cover object-[center_22%]" },
 ]
 
 function Directory() {

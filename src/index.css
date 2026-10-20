@@ -69,6 +69,7 @@ textarea.form-input { min-height: 9rem; }
 .home-hero .hero-copy > p:not(.eyebrow) { color: #d5e0e5; }
 .home-hero .hero-copy .eyebrow { color: #d5e0e5; letter-spacing: .1em; }
 @media (max-width: 767px) {
+  .hero-artwork-image, .home-hero img { object-position: 50% 50%; }
   .hero-artwork-overlay { background: rgb(6 47 74 / .78); }
 }
 .about-feature { display: grid; position: relative; isolation: isolate; width: calc(100% - 2.5rem); max-width: 80rem; margin: 4rem auto; overflow: hidden; border: 1px solid rgb(6 75 123 / .2); border-radius: 1.25rem; background: #062f4a; color: white; }
