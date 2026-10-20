@@ -3,6 +3,7 @@ const image = (name: string) => `${import.meta.env.BASE_URL}images/${name}`
 
 export const images = {
   logo: image("zapd-logo.png"),
+  iapdLogo: image("iapd-logo.png"),
   squareLogo: image("zapd-logo-square.png"),
   drSheetal: image("dr-sheetal-bhaskar.jpg"),
   drViki: image("dr-viki-portrait.jpeg"),

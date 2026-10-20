@@ -673,9 +673,14 @@ function Home() {
               education, resources and events for paediatric dental professionals.
             </p>
           </div>
-          <a href="https://iapdworld.org/" target="_blank" rel="noopener noreferrer" className="primary-button">
-            Visit IAPD <span className="sr-only">(opens in a new tab)</span><Icon name="arrow" />
-          </a>
+          <div className="flex flex-col items-center gap-6">
+            <a href="https://iapdworld.org/" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-white p-5" aria-label="IAPD — International Association of Paediatric Dentistry (opens in a new tab)">
+              <img src={images.iapdLogo} alt="IAPD — International Association of Paediatric Dentistry" width="267" height="112" loading="lazy" decoding="async" className="h-auto w-full max-w-[267px] object-contain" />
+            </a>
+            <a href="https://iapdworld.org/" target="_blank" rel="noopener noreferrer" className="primary-button">
+              Visit IAPD <span className="sr-only">(opens in a new tab)</span><Icon name="arrow" />
+            </a>
+          </div>
         </div>
       </section>
 
