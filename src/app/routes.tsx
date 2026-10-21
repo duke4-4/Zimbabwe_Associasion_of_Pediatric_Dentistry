@@ -1346,10 +1346,10 @@ function Membership() {
 
 const members = [
   { name: "Dr A Chingwena", image: drChingwena, email: "info@zapd.org.zw", role: "President" },
-  { name: "Dr Madziwa", image: drMadziwa, email: "info@zapd.org.zw", role: "CPD & Education Delegate" },
   { name: "Dr Sheetal Bhaskar", image: drSheetal, email: "info@zapd.org.zw", role: "President Elect / Secretary" },
   { name: "Dr C Viki", image: drViki, email: "info@zapd.org.zw", role: "Treasurer" },
   { name: "Dr C Farirayi", image: drChipo, email: "info@zapd.org.zw", role: "CPD & Education Delegate" },
+  { name: "Dr Madziwa", image: drMadziwa, email: "info@zapd.org.zw", role: "CPD & Education Delegate" },
   { name: "Dr Nyoni", image: drNyoni, email: "info@zapd.org.zw", role: "CPD & Education Delegate", imageClass: "object-cover object-[center_22%]" },
 ]
 
